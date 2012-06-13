@@ -1,0 +1,5 @@
+# Tile exporting
+data-processing/tiles/*/tiles
+data-processing/tiles/*/tiles-tmp
+data-processing/tiles/*/exports
+data-processing/tiles/*/cache
