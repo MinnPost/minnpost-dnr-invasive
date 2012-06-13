@@ -12,3 +12,9 @@ Data from the Minnesota DNR and their awesome [Data Deli](http://deli.dnr.state.
 * Invasive Species - Terrestrial Observations
     * http://deli.dnr.state.mn.us/metadata.html?id=L390004820203
     * ftp://ftp.dnr.state.mn.us/pub/deli/d23954283106172.zip
+* Combined Shapefile
+    * https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip
+
+## Data processing
+
+* To work on the TileMill project: ```cd data-processing/tiles && fab map:mn-invasive link; cd -;```
