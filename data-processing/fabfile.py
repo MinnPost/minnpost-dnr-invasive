@@ -465,6 +465,38 @@ def remove_from_s3():
       local('s3cmd del --recursive s3://%(s3_bucket)s/%(project_name)s/%(map)s' % env)
 
 
+def vdata_load_data():
+  """
+  Load viz data.
+  """
+  path = os.path.dirname(__file__)
+  json_file = os.path.join(path, '../visualizations/data/species-metadata.json')
+  json_file_object = open(json_file, 'r')
+  json_data = json_file_object.read()
+  json_file_object.close()
+  env.vdata_json = json.loads(json_data)
+
+
+def vdata_save_data():
+  """
+  Save viz data.
+  """
+  require('vdata_json')
+  
+  path = os.path.dirname(__file__)
+  output_file = os.path.join(path, '../visualizations/data/species-metadata.json')
+  json_output = json.dumps(env.vdata_json, sort_keys=True, indent=2)
+  
+  # Output to JSON file
+  output = open(output_file, 'w')
+  output.write(json_output + "\n")
+  output.close()
+  # Output to JSONP file
+  output = open(output_file + 'p', 'w')
+  output.write('%s(%s);\n' % ('species_metadata_callback', json_output))
+  output.close()
+
+
 def vdata_get_thumbs():
   """
   Given sources, creates data for visualization.
@@ -530,7 +562,7 @@ def vdata_get_thumbs():
     dbp_json = urllib2.urlopen(dbpedia_call).read()
     dbp_results = json.loads(dbp_json)
     try:
-      json_data[sp]['thumb'] = dbp_results[dbpedia_key % redirected_title][dbpedia_thumb_key][0]['value']
+      json_data[sp]['wp_thumb'] = dbp_results[dbpedia_key % redirected_title][dbpedia_thumb_key][0]['value']
     except KeyError:
       print 'KeyError for %s' % wp_title
 
@@ -546,3 +578,56 @@ def vdata_get_thumbs():
   output = open(output_file + 'p', 'w')
   output.write('%s(%s);\n' % ('species_metadata_callback', json_output))
   output.close()
+
+
+def vdata_get_colors():
+  """
+  Read in data from JSON, put images through ColorSuckr.com
+  """
+  vdata_load_data()
+  json_data = env.vdata_json
+  
+  # Function to check for existing color
+  def check_color(data, color):
+    found = False
+    for d in data:
+      if data[d]['color'] == color:
+        found = True
+        
+    return found
+  
+  # Get color info from ColorSuckr
+  cs_call = 'http://coloursuckr.com/?output=json&img=%s'
+  for key in json_data:
+    sp = json_data[key]
+    print 'Getting colors for %s' % key
+    
+    # Make call
+    api_call = cs_call % sp['wp_thumb']
+    cs_json = urllib2.urlopen(api_call).read()
+    cs_results = json.loads(cs_json)
+    
+    # Check for existing color and use lightest first
+    colors = cs_results[0]['hex']
+    counting = 1
+    color = colors.pop()
+    color = colors.pop()
+    
+    if color == None or not isinstance(color, basestring):
+      print 'Color not found for %s' % key
+      print color
+      print api_call
+      continue
+    
+    while check_color(json_data, color) == True and counting < len(colors):
+      color = colors.pop()
+      counting = counting + 1
+      
+    print 'Found color %s' % color
+    json_data[key]['color'] = color
+    
+  # Save data
+  env.vdata_json = json_data
+  vdata_save_data()
+  
+  
