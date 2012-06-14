@@ -12,7 +12,33 @@
   ],
   "format": "png",
   "interactivity": {
-    "fields": []
+    "fields": [
+      "SCI_NAME",
+      "COM_NAME",
+      "INV_TYPE",
+      "LOCALITY",
+      "DOWLKNUM",
+      "X",
+      "Y",
+      "FIRST_OBS",
+      "NUM_OBS",
+      "SITE",
+      "COUNTY",
+      "LOCATION",
+      "DATE",
+      "OBSERVER",
+      "OBSERVE_AF",
+      "COMMON_NAM",
+      "NUM_PLANTS",
+      "PLANT_DIST",
+      "ACRES_INF",
+      "SITE_TYPE",
+      "COMMENT",
+      "X_PROJ",
+      "Y_PROJ"
+    ],
+    "layer": "invasive",
+    "template_teaser": "{{{SCI_NAME}}} <br /> \n{{{COM_NAME}}} <br /> \n {{{INV_TYPE}}} <br /> \n {{{LOCALITY}}} <br /> \n {{{DOWLKNUM}}} <br /> \n {{{X}}} <br /> \n {{{Y}}} <br /> \n {{{FIRST_OBS}}} <br /> \n {{{NUM_OBS}}} <br /> \n {{{SITE}}} <br /> \n {{{COUNTY}}} <br /> \n {{{LOCATION}}} <br /> \n {{{DATE}}} <br /> \n {{{OBSERVER}}} <br /> \n {{{OBSERVE_AF}}} <br /> \n {{{COMMON_NAM}}} <br /> \n {{{NUM_PLANTS}}} <br /> \n {{{PLANT_DIST}}} <br /> \n {{{ACRES_INF}}} <br /> \n {{{SITE_TYPE}}} <br /> \n {{{COMMENT}}} <br /> \n {{{X_PROJ}}}  <br /> \n{{{Y_PROJ}}}"
   },
   "minzoom": 0,
   "maxzoom": 22,
@@ -27,7 +53,10 @@
       "id": "invasive",
       "class": "",
       "Datasource": {
-        "file": "https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip"
+        "file": "https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip",
+        "id": "invasive",
+        "project": "mn-invasive",
+        "srs": null
       },
       "srs-name": "autodetect",
       "srs": "",

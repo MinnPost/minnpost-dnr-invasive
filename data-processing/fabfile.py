@@ -630,4 +630,31 @@ def vdata_get_colors():
   env.vdata_json = json_data
   vdata_save_data()
   
+
+
+def vdata_tile_colors():
+  """
+  Read in data from JSON, create colors.mss
+  """
+  vdata_load_data()
+  json_data = env.vdata_json
+  path = os.path.dirname(__file__)
+  spfile = os.path.join(path, './tiles/mn-invasive/colors.mss')
+  output = ''
   
+  template = """
+#invasive[COM_NAME = "%s"] { marker-fill: #%s }
+#invasive[COMMON_NAM = "%s"] { marker-fill: #%s }
+  """
+  
+  for k in json_data:
+    if json_data[k]['color'] <> '':
+      output = output + template % (
+        json_data[k]['data_name'].replace("'", "\'"), json_data[k]['color'][0:6], 
+        json_data[k]['data_name'].replace("'", "\'"), json_data[k]['color'][0:6]
+      )
+  
+  # Output to file
+  outputf = open(spfile, 'w')
+  outputf.write(output + "\n")
+  outputf.close()
