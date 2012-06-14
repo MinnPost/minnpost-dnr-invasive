@@ -2,7 +2,7 @@
 """
 Fab file to help with managing project.  For docs on Fab file, please see: http://docs.fabfile.org/
 
-For exporting tiles to s3, copied form minnpost-base-maps
+For exporting tiles to s3 and processing data
 """
 import sys
 import os
@@ -10,6 +10,9 @@ import warnings
 import json
 import re
 import urllib2
+import csv
+import json
+
 from fabric.api import *
 
 """
@@ -460,3 +463,86 @@ def remove_from_s3():
     for bucket in env.s3_buckets:
       env.s3_bucket = bucket 
       local('s3cmd del --recursive s3://%(s3_bucket)s/%(project_name)s/%(map)s' % env)
+
+
+def vdata_get_thumbs():
+  """
+  Given sources, creates data for visualization.
+  """
+  path = os.path.dirname(__file__)
+  json_data = {}
+  wp_base = 'http://en.wikipedia.org/wiki/'
+  wp_api_base = 'http://en.wikipedia.org/w/api.php?format=json'
+  wp_api_title = wp_api_base + '&action=query&prop=images&&imlimit=10&redirects='
+  
+  # Read CSV data
+  spfile = os.path.join(path, '../data/species-ids-colors.csv')
+  reader = csv.reader(open(spfile, 'rU'), delimiter=',', quotechar='"', dialect=csv.excel_tab)
+  
+  row_count = 0
+  for row in reader:
+    if row_count > 0:
+      json_data[row[0]] = {
+        'data_name': row[0],
+        'site_name': row[1],
+        'color': row[2],
+        'wp': row[3],
+        'wp_thumb': row[4]
+      }
+      
+      api_call = wp_api_base + '&action=query&prop=images|imageinfo|links'
+    
+    row_count = row_count + 1;
+    
+        
+  # Get wikipedia image URL.  With Wikipedia, the infobox
+  # does not have an API really, so use DBPedia instead,
+  # but we DBPedia doesn't handle redirects well.
+  for sp in json_data:
+    this_sp = json_data[sp]
+    wp_title = this_sp['wp'][len(wp_base):]
+    redirected_title = wp_title
+    
+    wp_call = wp_api_base + '&action=query&prop=info&inprop=url&intoken=unblock&redirects=&titles=%s' % wp_title
+    dbpedia_call = 'http://dbpedia.org/data/%s.json'
+    dbpedia_key = 'http://dbpedia.org/resource/%s'
+    dbpedia_thumb_key = 'http://dbpedia.org/ontology/thumbnail'
+    
+    print 'Reading data for %s' % wp_title
+    if this_sp['wp_thumb'] <> '':
+      print 'Thumb already defined for %s' % wp_title
+      continue
+    
+    # Get redirected title
+    wp_json = urllib2.urlopen(wp_call).read()
+    wp_results = json.loads(wp_json)
+    
+    result_count = 0
+    for page in wp_results['query']['pages']:
+      if result_count == 0:
+        redirected_title = wp_results['query']['pages'][page]['fullurl']
+        redirected_title = redirected_title[len(wp_base):]
+        
+      result_count = result_count + 1
+    
+    # Get data from DBPedia
+    dbpedia_call = dbpedia_call % redirected_title
+    dbp_json = urllib2.urlopen(dbpedia_call).read()
+    dbp_results = json.loads(dbp_json)
+    try:
+      json_data[sp]['thumb'] = dbp_results[dbpedia_key % redirected_title][dbpedia_thumb_key][0]['value']
+    except KeyError:
+      print 'KeyError for %s' % wp_title
+
+  # Export to visualization data
+  output_file = os.path.join(path, '../visualizations/data/species-metadata.json')
+  json_output = json.dumps(json_data, sort_keys=True, indent=2)
+  
+  # Output to JSON file
+  output = open(output_file, 'w')
+  output.write(json_output + "\n")
+  output.close()
+  # Output to JSONP file
+  output = open(output_file + 'p', 'w')
+  output.write('%s(%s);\n' % ('species_metadata_callback', json_output))
+  output.close()
