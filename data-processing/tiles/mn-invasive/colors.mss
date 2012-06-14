@@ -2,8 +2,8 @@
 #invasive[COM_NAME = "Thistle, Canada"] { marker-fill: #9E9BA5 }
 #invasive[COMMON_NAM = "Thistle, Canada"] { marker-fill: #9E9BA5 }
   
-#invasive[COM_NAME = "Queen Ann's Lace"] { marker-fill: #9E9C6D }
-#invasive[COMMON_NAM = "Queen Ann's Lace"] { marker-fill: #9E9C6D }
+#invasive[COM_NAME = "Queen Ann\'s Lace"] { marker-fill: #9E9C6D }
+#invasive[COMMON_NAM = "Queen Ann\'s Lace"] { marker-fill: #9E9C6D }
   
 #invasive[COM_NAME = "Common carp"] { marker-fill: #C6AE71 }
 #invasive[COMMON_NAM = "Common carp"] { marker-fill: #C6AE71 }
@@ -38,8 +38,8 @@
 #invasive[COM_NAME = "Chinese and Banded Mystery Snails"] { marker-fill: #CED2B2 }
 #invasive[COMMON_NAM = "Chinese and Banded Mystery Snails"] { marker-fill: #CED2B2 }
   
-#invasive[COM_NAME = "St. John's-Wort, Common"] { marker-fill: #CFAC0C }
-#invasive[COMMON_NAM = "St. John's-Wort, Common"] { marker-fill: #CFAC0C }
+#invasive[COM_NAME = "St. John\'s-Wort, Common"] { marker-fill: #CFAC0C }
+#invasive[COMMON_NAM = "St. John\'s-Wort, Common"] { marker-fill: #CFAC0C }
   
 #invasive[COM_NAME = "Vetch, Crown"] { marker-fill: #9A8C68 }
 #invasive[COMMON_NAM = "Vetch, Crown"] { marker-fill: #9A8C68 }
