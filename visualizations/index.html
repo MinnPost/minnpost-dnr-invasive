@@ -47,6 +47,9 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         height: 500px;
         float: left;
       }
+      .leaflet-container a {
+        color: #801019;
+      }
       .map-popup-container {
         position: absolute;
         top: 0;
@@ -54,13 +57,28 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         right: 0;
         min-width: 100px;
         max-width: 400px;
-        width: 25%;
-        background-color: #FFFFFF;
-        opacity: 0.8;
+        width: 35%;
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.8);
       }
       
       .popup-contents-wrapper {
         padding: 10px;
+      }
+      
+      .color-bar {
+        width: 100%;
+        height: 25px;
+      }
+      
+      .scientific-name {
+        font-style: italic;
+        margin-bottom: 1em;
+      }
+      
+      .wp-thumb {
+        width: 100px;
+        margin-top: 1em;
       }
     </style>
     
@@ -75,8 +93,62 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     <script id="template-popup-contents" type="text/template">
       <div class="popup-contents-wrapper">
         <div class="popup-data">
-          <% var title = (md.COMMON_NAM) ? md.COMMON_NAM : md.COM_NAME; %>
+          <div class="color-bar" style="background-color: #<%= sm.color %>;"></div>
           <h3><%= title %></h3>
+          <% if (md.SCI_NAME != '') { %>
+            <div class="scientific-name"><%= md.SCI_NAME %></div>
+          <% } %>
+          
+          <table>
+            <tbody>
+              <tr class="location">
+                <td>Location</td>
+                <td>
+                  <% if (md.COUNTY != '') { %><%= md.COUNTY %> County. <% } %>
+                  <% if (md.LOCATION != '') { %><%= md.LOCATION %>. <% } %>
+                  <% if (md.LOCALITY != '') { %><%= md.LOCALITY %>. <% } %>
+                </td>
+              </tr>
+              <% if (md.ACRES_INF != '' || md.ACRES_INF != 0) { %>
+                <tr class="area-infected">
+                  <td>Area infected</td>
+                  <td><%= md.ACRES_INF %></td>
+                </tr>
+              <% } %>
+              <% if (md.NUM_PLANTS != '' || md.NUM_PLANTS != 0) { %>
+                <tr class="number-observed">
+                  <td>Number observed</td>
+                  <td><%= md.NUM_PLANTS %></td>
+                </tr>
+              <% } %>
+              <% if (md.PLANT_DIST != '' || md.PLANT_DIST != 0) { %>
+                <tr class="description">
+                  <td>Description</td>
+                  <td><%= md.PLANT_DIST %></td>
+                </tr>
+              <% } %>
+              <% if (md.FIRST_OBS != '' || md.FIRST_OBS != 0) { %>
+                <tr class="observed">
+                  <td>First observed</td>
+                  <td><%= md.PLANT_DIST %></td>
+                </tr>
+              <% } %>
+              <% if (md.DATE != '' || md.DATE != 0) { %>
+                <tr class="observed">
+                  <td>First observed</td>
+                  <td><%= md.DATE %></td>
+                </tr>
+              <% } %>
+              <% if (sm.wp != '') { %>
+                <tr class="more-info-links">
+                  <td>More info</td>
+                  <td><a href="<%= sm.wp %>" target="_blank">Wikipedia article</a></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+          
+          <img class="wp-thumb" src="<%= sm.wp_thumb %>" />
         </div>
       <div class="popup-contents-wrapper">
     </script>
@@ -103,6 +175,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         $(document).ready(function() {
           // Settings and placeholders
           var sm = {};
+          var dataDir = './data/';
           
           // Create map
           var center = new L.LatLng(44.96552667056723, -93.25298309326172);
@@ -149,12 +222,24 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   if ((e.e.type === 'mousemove' || !e.e.type)) {
                     // Mouseover
                     map._container.style.cursor = 'pointer';
-                    
+                    var tData = { 'md': e.data, 'sm': {} };
                     var $popup = $('.map-popup-container');
-                    var template = _.template($("#template-popup-contents").html(), { 'md': e.data });
                     
-                    $popup.html(template);
-                    $popup.fadeIn('fast');
+                    // Check metada
+                    tData.title = (e.data.COMMON_NAM == '') ? e.data.COM_NAME :
+                      e.data.COMMON_NAM;
+                    if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
+                      tData.sm = sm[tData.title];
+                      if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name != '') {
+                        tData.title = sm[tData.title].site_name;
+                      }
+                    }
+                    console.log(tData);
+                    // Display popup
+                    if (!_.isEmpty(tData) && tData.title != '') {
+                      $popup.html(_.template($("#template-popup-contents").html(), tData));
+                      $popup.fadeIn('fast');
+                    }
                   }
                   else {
                     // Popup
@@ -164,6 +249,18 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   map._container.style.cursor = 'default';
                 }
               });
+          });
+          
+          // Load up the metadata
+          window.species_metadata_callback = function(metadata) {
+            sm = metadata;
+            console.log(sm);
+          };
+          $.ajax({
+            type: 'GET',
+            dataType: 'jsonp',
+            url: dataDir + '/species-metadata.jsonp?callback=species_metadata_callback',
+            jsonp: 'callback'
           });
         });
       })(jQuery, window);
