@@ -105,14 +105,14 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Bluszczyk_kurdybanek_cm01.jpg/200px-Bluszczyk_kurdybanek_cm01.jpg"
   }, 
   "Daisy, Oxeye": {
-    "color": "", 
+    "color": "CDA21A", 
     "data_name": "Daisy, Oxeye", 
     "site_name": "Oxeye daisy", 
     "wp": "http://en.wikipedia.org/wiki/Oxeye_daisy", 
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg/220px-Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg"
   }, 
   "Dame's rocket": {
-    "color": "", 
+    "color": "9E5EBB ", 
     "data_name": "Dame's rocket", 
     "site_name": "", 
     "wp": "http://en.wikipedia.org/wiki/Dame%27s_rocket", 
@@ -126,7 +126,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Regenwurm1.jpg/200px-Regenwurm1.jpg"
   }, 
   "Elecampane, British": {
-    "color": "", 
+    "color": "9D9D1F", 
     "data_name": "Elecampane, British", 
     "site_name": "", 
     "wp": "http://en.wikipedia.org/wiki/Elecampane", 
@@ -224,7 +224,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Starr_051202-5640_Bromus_catharticus.jpg/200px-Starr_051202-5640_Bromus_catharticus.jpg"
   }, 
   "Gypsy moth": {
-    "color": "", 
+    "color": "A39467", 
     "data_name": "Gypsy moth", 
     "site_name": "Gypsy moth", 
     "wp": "http://en.wikipedia.org/wiki/Gypsy_moth", 
@@ -336,7 +336,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Acer_ginnala.jpg/200px-Acer_ginnala.jpg"
   }, 
   "Maple, Norway": {
-    "color": "", 
+    "color": "579323", 
     "data_name": "Maple, Norway", 
     "site_name": "Norway maple", 
     "wp": "http://en.wikipedia.org/wiki/Norway_maple", 
@@ -497,14 +497,14 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Saint_johns_wart_flowers.jpg/200px-Saint_johns_wart_flowers.jpg"
   }, 
   "Sweetclover, White": {
-    "color": "", 
+    "color": "DAD5A5", 
     "data_name": "Sweetclover, White", 
     "site_name": "White and yellow sweet clover", 
     "wp": "http://en.wikipedia.org/wiki/Sweet_clover", 
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Melilotus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-093.jpg/220px-Melilotus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-093.jpg"
   }, 
   "Sweetclover, Yellow": {
-    "color": "", 
+    "color": "A2981B", 
     "data_name": "Sweetclover, Yellow", 
     "site_name": "White and yellow sweet clover", 
     "wp": "http://en.wikipedia.org/wiki/Sweet_clover", 

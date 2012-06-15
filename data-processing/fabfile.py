@@ -53,22 +53,49 @@ def vdata_save_data():
   output.close()
 
 
+def vdata_load_csv():
+  """
+  Load viz data.
+  """
+  path = os.path.dirname(__file__)
+  spfile = os.path.join(path, '../data/species-ids-colors.csv')
+  env.csv_file = open(spfile, 'r')
+  env.csv_reader = csv.reader(env.csv_file, delimiter=',', quotechar='"', dialect=csv.excel_tab)
+
+
+def vdata_reset_csv():
+  env.csv_file.seek(0)
+
+def vdata_get_csv_value(data_name):
+  """
+  Load viz data.
+  """
+  if env.csv_reader <> None:
+    vdata_reset_csv()
+    
+    for row in env.csv_reader:
+      if row[0] == data_name:
+        return row
+  
+  # return nothing is did not find
+  return None
+
+
 def vdata_get_thumbs():
   """
   Given sources, creates data for visualization.
   """
   path = os.path.dirname(__file__)
   json_data = {}
+  vdata_load_csv()
+  
   wp_base = 'http://en.wikipedia.org/wiki/'
   wp_api_base = 'http://en.wikipedia.org/w/api.php?format=json'
   wp_api_title = wp_api_base + '&action=query&prop=images&&imlimit=10&redirects='
   
-  # Read CSV data
-  spfile = os.path.join(path, '../data/species-ids-colors.csv')
-  reader = csv.reader(open(spfile, 'rU'), delimiter=',', quotechar='"', dialect=csv.excel_tab)
-  
+  # Start creating json object from csv data
   row_count = 0
-  for row in reader:
+  for row in env.csv_reader:
     if row_count > 0:
       json_data[row[0]] = {
         'data_name': row[0],
@@ -136,13 +163,15 @@ def vdata_get_thumbs():
   output.close()
 
 
-def vdata_get_colors():
+def vdata_get_colors(update=False):
   """
-  Read in data from JSON, put images through ColorSuckr.com
+  Read in data from JSON and CSV, put images through ColorSuckr.com.
+  Set update to true to only get colors that don't exist yet.
   """
+  vdata_load_csv()
   vdata_load_data()
   json_data = env.vdata_json
-  
+
   # Function to check for existing color
   def check_color(data, color):
     found = False
@@ -156,7 +185,20 @@ def vdata_get_colors():
   cs_call = 'http://coloursuckr.com/?output=json&img=%s'
   for key in json_data:
     sp = json_data[key]
+    
+    # Check for color and update
+    if (update == True or update == 'True') and sp['color'] <> '':
+      print 'Color exists for %s' % key
+      continue
+    
     print 'Getting colors for %s' % key
+    
+    # Check for color in CSV
+    csv_found = vdata_get_csv_value(key)
+    if csv_found <> None and csv_found[2] <> '':
+      json_data[key]['color'] = csv_found[2]
+      print 'Found color in CSV, #%s' % csv_found[2]
+      continue
     
     # Make call
     api_call = cs_call % sp['wp_thumb']
@@ -194,13 +236,14 @@ def vdata_tile_colors():
   """
   vdata_load_data()
   json_data = env.vdata_json
+  
   path = os.path.dirname(__file__)
   spfile = os.path.join(path, './tiles/mn-invasive/colors.mss')
   output = ''
   
   template = """
-#invasive[COM_NAME = "%s"] { marker-fill: #%s }
-#invasive[COMMON_NAM = "%s"] { marker-fill: #%s }
+#invasive[COM_NAME = "%s"][zoom > 0] { marker-fill: #%s }
+#invasive[COMMON_NAM = "%s"][zoom > 0] { marker-fill: #%s }
   """
   
   for k in json_data:
