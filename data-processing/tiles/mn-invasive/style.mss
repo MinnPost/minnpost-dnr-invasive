@@ -1,9 +1,5 @@
 @default: #B3B3B3;
 
-Map {
-  background-color: #000000;
-}
-
 #invasive {
   marker-width: 2;
   /* marker-fill: @default; */
