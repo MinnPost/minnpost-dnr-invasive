@@ -1,8 +1,6 @@
-@default: #B3B3B3;
 
 #invasive {
   marker-width: 2;
-  /* marker-fill: @default; */
   marker-line-width: 0;
   marker-line-color: transparent;
   marker-allow-overlap: true;
