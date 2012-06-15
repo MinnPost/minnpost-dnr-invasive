@@ -21,4 +21,8 @@ Data from the Minnesota DNR and their awesome [Data Deli](http://deli.dnr.state.
 
 * To work on the TileMill project: ```cd data-processing/tiles && fab map:mn-invasive link; cd -;```
 * In order to get the shapefile into a PostGIS database to do some basic analysis, you can utilize ogr2ogr: ```ogr2ogr -f "PostgreSQL" PG:"host=localhost user=postgres dbname=minnpost" 20120613-combined-DNR\ Invasive\ Species.shp```
-* Generate thumbs from CSV: ```cd data-processing && fab vdata_get_thumbs; cd -;```
+* Create species metadata:
+    * Generate thumbs from CSV, Wikipedia, and DBPedia: ```cd data-processing && fab vdata_get_thumbs; cd -;```
+    * Get colors from [ColorSuckr](http://coloursuckr.com/): ```cd data-processing && fab vdata_get_colors:True; cd -;```
+    * Put colors into TileMill project: ```cd data-processing && fab vdata_tile_colors; cd -;```
+* Export tiles to S3: ```cd data-processing/tiles && fab map:mn-invasive production export_deploy:32,4,5; cd -;```
