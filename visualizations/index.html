@@ -75,10 +75,15 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     <script id="template-popup-contents" type="text/template">
       <div class="popup-contents-wrapper">
         <div class="popup-data">
-          <% var title = (md.common_nam) ? md.common_nam : md.com_name; %>
+          <% var title = (md.COMMON_NAM) ? md.COMMON_NAM : md.COM_NAME; %>
           <h3><%= title %></h3>
         </div>
       <div class="popup-contents-wrapper">
+    </script>
+    <script id="template-popup-container" type="text/template">
+      <div class="map-popup-container">
+        <div class="footnote help">Mouse over the dots on the map to see which species they are.</div>
+      </div>
     </script>
   
     <!-- jQuery if it is not there and jQueryCustom for Backbone --><!-- jQuery -->
@@ -94,62 +99,75 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     
     
     <script type="text/javascript">
-      var center = new L.LatLng(44.96552667056723, -93.25298309326172);
-      var map = new L.Map('map', {
-        minZoom: 4,
-        maxZoom: 10
-      });
-      map.setView(center, 5);
-      map.addControl(new L.Control.Fullscreen());
-      
-      $(map._container).append($('<div class="map-popup-container"><div class="footnote help">Mouse over the dots on the map to see which species they are.</div></div>'));
-      
-      var minnpost = new L.TileLayer('http://{s}.tiles.minnpost.com/minnpost-basemaps/minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png', 
-        { attribution: 'Map imagery from <a target="_blank" href="http://minnpost.com">MinnPost</a>; Map data from <a target="_blank" href="http://openstreetmap.org">OpenStreetMap</a>.',
-      scheme: 'tms' });
-      map.addLayer(minnpost);
-      
-      
-      wax.tilejson('http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp', function(tilejson) {
-        // Hack the planet (aka the tilejson)
-        tilejson.tiles = [
-          'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
-        ];
-        tilejson.grids = [
-          'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
-        ];
-        tilejson.scheme = 'tms';
-      
-        // Add layer and interaction
-        map.addLayer(new wax.leaf.connector(tilejson));
-        wax.leaf.interaction()
-          .map(map)
-          .tilejson(tilejson)
-          .on({
-            on: function(e) {
-              // Event handling as defined in wax
-              if ((e.e.type === 'mousemove' || !e.e.type)) {
-                // Mouseover
-                map._container.style.cursor = 'pointer';
-                
-                var $popup = $('.map-popup-container');
-                var template = _.template($("#template-popup-contents").html(), { 'md': e.data });
-                
-                $popup.html(template);
-                $popup.fadeIn('fast');
-              }
-              else {
-                // Popup
-              }
-            },
-            off: function(e) {
-              map._container.style.cursor = 'default';
-            }
+      (function($, window, undefined) {
+        $(document).ready(function() {
+          // Settings and placeholders
+          var sm = {};
+          
+          // Create map
+          var center = new L.LatLng(44.96552667056723, -93.25298309326172);
+          var map = new L.Map('map', {
+            minZoom: 4,
+            maxZoom: 10
           });
-      });
-      
+          map.setView(center, 5);
+          map.addControl(new L.Control.Fullscreen());
+          
+          // Placeholder for popup content
+          $(map._container).append(_.template($('#template-popup-container').html(), {}));
+          
+          // Base layers
+          var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
+            'minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png';
+          var attribution = 'Map imagery from <a target="_blank" ' +
+            'href="http://minnpost.com">MinnPost</a>; Map data from ' +
+            '<a target="_blank" href="http://openstreetmap.org">OpenStreetMap</a>.'
+          var minnpost = new L.TileLayer(tiles, 
+            { attribution: attribution, scheme: 'tms' });
+          map.addLayer(minnpost);
+          
+          // Tilejson layer of species
+          var metadata = 'http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp';
+          wax.tilejson(metadata, function(tilejson) {
+            // Hack the planet (aka the tilejson)
+            tilejson.scheme = 'tms';
+            tilejson.tiles = [
+              'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
+            ];
+            tilejson.grids = [
+              'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
+            ];
+          
+            // Add layer and interaction
+            map.addLayer(new wax.leaf.connector(tilejson));
+            wax.leaf.interaction()
+              .map(map)
+              .tilejson(tilejson)
+              .on({
+                on: function(e) {
+                  // Event handling as defined in wax
+                  if ((e.e.type === 'mousemove' || !e.e.type)) {
+                    // Mouseover
+                    map._container.style.cursor = 'pointer';
+                    
+                    var $popup = $('.map-popup-container');
+                    var template = _.template($("#template-popup-contents").html(), { 'md': e.data });
+                    
+                    $popup.html(template);
+                    $popup.fadeIn('fast');
+                  }
+                  else {
+                    // Popup
+                  }
+                },
+                off: function(e) {
+                  map._container.style.cursor = 'default';
+                }
+              });
+          });
+        });
+      })(jQuery, window);
     </script>
-    
   </div>
   <!-- END: Embeddable -->
 
