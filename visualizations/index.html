@@ -44,21 +44,33 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     <style type="text/css">
       #map {
         width: 100%;
-        height: 300px;
+        height: 500px;
+        float: left;
+      }
+      .map-popup-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        min-width: 100px;
+        max-width: 400px;
+        width: 25%;
+        background-color: #FFFFFF;
+        opacity: 0.8;
       }
     </style>
     
     <div id="minnpost-invasive-species-application">
       
       <div id="map"></div>
+      <p class="footnote"></p>
+      
     </div>
     
-    <p class="footnote"></p>
-    
     <!-- Templates to be used in client side processing. -->
-    <script id="template-" type="text/template">
+    <script id="template-popup-contents" type="text/template">
       <div class="">
-        
+        <div class="footnote help">Mouse over the dots on the map to see which species they are.</div>
       </div>
     </script>
   
@@ -78,14 +90,52 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     <script type="text/javascript">
       var center = new L.LatLng(44.96552667056723, -93.25298309326172);
       var map = new L.Map('map', {});
-      map.setView(center, 6);
+      map.setView(center, 5);
       map.addControl(new L.Control.Fullscreen());
       
+      $(map._container).append($('<div class="map-popup-container"></div>'));
       
-      var minnpost = new L.TileLayer('http://{s}.tiles.minnpost.com/minnpost-basemaps/minnpost-minnesota-greyscale-no-labels/{z}/{x}/{y}.png', 
+      var minnpost = new L.TileLayer('http://{s}.tiles.minnpost.com/minnpost-basemaps/minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png', 
         { attribution: 'Map imagery from <a target="_blank" href="http://minnpost.com">MinnPost</a>; Map data from <a target="_blank" href="http://openstreetmap.org">OpenStreetMap</a>.',
       scheme: 'tms' });
       map.addLayer(minnpost);
+      
+      
+      wax.tilejson('http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp', function(tilejson) {
+        tilejson.tiles = [
+          'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
+        ];
+        tilejson.grids = [
+          'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
+        ];
+      
+        map.addLayer(new wax.leaf.connector(tilejson));
+        wax.leaf.interaction()
+          .map(map)
+          .tilejson(tilejson)
+          .on({
+            on: function(e) {
+              console.log(e);
+              // Event handling as defined in wax
+              if ((e.e.type === 'mousemove' || !e.e.type)) {
+                // Mouseover
+                map._container.style.cursor = 'pointer';
+                
+                var $popup = $('.map-popup-container');
+                var template = _.template($("#template-popup-contents").html(), {});
+                
+                $popup.html(template);
+                $popup.fadeIn('fast');
+              }
+              else {
+                // Popup
+              }
+            },
+            off: function(e) {
+              map._container.style.cursor = 'default';
+            }
+          });
+      });
       
     </script>
     
