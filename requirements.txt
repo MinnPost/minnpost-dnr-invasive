@@ -1,3 +1,6 @@
 dateutils
 csv
 json
+psycopg2
+mbutil
+fabric

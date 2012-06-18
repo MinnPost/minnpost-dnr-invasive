@@ -1,6 +1,7 @@
 {
   "Absinthe wormwood": {
     "color": "8CA269 ", 
+    "count": 1, 
     "data_name": "Absinthe wormwood", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -10,6 +11,7 @@
   }, 
   "Alyssum, Hoary": {
     "color": "9FA4A4 ", 
+    "count": 896, 
     "data_name": "Alyssum, Hoary", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/hoaryalyssum.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1622.jpg", 
@@ -19,6 +21,7 @@
   }, 
   "Barberry, Japanese": {
     "color": "BBBFC2 ", 
+    "count": 16, 
     "data_name": "Barberry, Japanese", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/japanesebarberry.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1640.jpg", 
@@ -28,6 +31,7 @@
   }, 
   "Bittercress, Narrowleaf": {
     "color": "8A9F2C ", 
+    "count": 1, 
     "data_name": "Bittercress, Narrowleaf", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -37,6 +41,7 @@
   }, 
   "Bittersweet, Asian": {
     "color": "983224 ", 
+    "count": 3, 
     "data_name": "Bittersweet, Asian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/oriental_bittersweet.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_2966.jpg", 
@@ -46,6 +51,7 @@
   }, 
   "Black Locust": {
     "color": "899F72 ", 
+    "count": 124, 
     "data_name": "Black Locust", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/blacklocust.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1636.jpg", 
@@ -73,6 +79,7 @@
   }, 
   "Buckthorn, Common": {
     "color": "949A5E ", 
+    "count": 6996, 
     "data_name": "Buckthorn, Common", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/buckthorn/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1637.jpg", 
@@ -82,6 +89,7 @@
   }, 
   "Buckthorn, Glossy": {
     "color": "A7AD9C ", 
+    "count": 255, 
     "data_name": "Buckthorn, Glossy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/buckthorn/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1637.jpg", 
@@ -91,6 +99,7 @@
   }, 
   "Burdock": {
     "color": "8F6881 ", 
+    "count": 57, 
     "data_name": "Burdock", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -100,6 +109,7 @@
   }, 
   "Butter and Eggs": {
     "color": "8A7757 ", 
+    "count": 232, 
     "data_name": "Butter and Eggs", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/butterandeggs.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1613.jpg", 
@@ -127,6 +137,7 @@
   }, 
   "Creeping Charlie": {
     "color": "9EC945 ", 
+    "count": 220, 
     "data_name": "Creeping Charlie", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/creepingcharlie.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1617.jpg", 
@@ -136,6 +147,7 @@
   }, 
   "Daisy, Oxeye": {
     "color": "CDA21A", 
+    "count": 2932, 
     "data_name": "Daisy, Oxeye", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/oxeyedaisy.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1627.jpg", 
@@ -145,6 +157,7 @@
   }, 
   "Dame's rocket": {
     "color": "9E5EBB ", 
+    "count": 13, 
     "data_name": "Dame's rocket", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -163,6 +176,7 @@
   }, 
   "Elecampane, British": {
     "color": "9D9D1F", 
+    "count": 50, 
     "data_name": "Elecampane, British", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -172,6 +186,7 @@
   }, 
   "Elm, Siberian": {
     "color": "728A5E ", 
+    "count": 666, 
     "data_name": "Elm, Siberian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianelm.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1643.jpg", 
@@ -190,6 +205,7 @@
   }, 
   "Eurasian watermilfoil": {
     "color": "B5CB92 ", 
+    "count": 224, 
     "data_name": "Eurasian watermilfoil", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/milfoil/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1448.jpg", 
@@ -226,6 +242,7 @@
   }, 
   "Foxglove, Grecian": {
     "color": "95976B ", 
+    "count": 28, 
     "data_name": "Foxglove, Grecian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/grecianfoxglove.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1621.jpg", 
@@ -235,6 +252,7 @@
   }, 
   "Garlic Mustard": {
     "color": "9DB64D ", 
+    "count": 101, 
     "data_name": "Garlic Mustard", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/garlicmustard.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1620.jpg", 
@@ -244,6 +262,7 @@
   }, 
   "Grass, Amur silver": {
     "color": "95BA45 ", 
+    "count": 179, 
     "data_name": "Grass, Amur silver", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/amursilvergrass.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1645.jpg", 
@@ -253,6 +272,7 @@
   }, 
   "Grass, Cheat": {
     "color": "B6BF88 ", 
+    "count": 11, 
     "data_name": "Grass, Cheat", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -262,6 +282,7 @@
   }, 
   "Grass, Kentucky bluegrass": {
     "color": "AA7984 ", 
+    "count": 27, 
     "data_name": "Grass, Kentucky bluegrass", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -271,6 +292,7 @@
   }, 
   "Grass, Reed canary": {
     "color": "7E8273 ", 
+    "count": 18226, 
     "data_name": "Grass, Reed canary", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/reedcanarygrass.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1646.jpg", 
@@ -280,6 +302,7 @@
   }, 
   "Grass, Smooth brome": {
     "color": "C4A179 ", 
+    "count": 2728, 
     "data_name": "Grass, Smooth brome", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/smoothbromegrass.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1647.jpg", 
@@ -298,6 +321,7 @@
   }, 
   "Hawkweed, Orange": {
     "color": "AC4724 ", 
+    "count": 1634, 
     "data_name": "Hawkweed, Orange", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/orangehawkweed.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1626.jpg", 
@@ -307,6 +331,7 @@
   }, 
   "Heterosporis": {
     "color": "98886E ", 
+    "count": 12, 
     "data_name": "Heterosporis", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -316,6 +341,7 @@
   }, 
   "Hogweed, Giant": {
     "color": "8EA45F ", 
+    "count": 11, 
     "data_name": "Hogweed, Giant", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -325,6 +351,7 @@
   }, 
   "Honeysuckle, Exotic": {
     "color": "ACB36E ", 
+    "count": 3206, 
     "data_name": "Honeysuckle, Exotic", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/exotichoneysuckles.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1638.jpg", 
@@ -334,6 +361,7 @@
   }, 
   "Iris, Yellow": {
     "color": "B3B354 ", 
+    "count": 7, 
     "data_name": "Iris, Yellow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/yellowiris.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1633.jpg", 
@@ -343,6 +371,7 @@
   }, 
   "Japanese Barberry": {
     "color": "B34134 ", 
+    "count": 1, 
     "data_name": "Japanese Barberry", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/japanesebarberry.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1640.jpg", 
@@ -352,6 +381,7 @@
   }, 
   "Knapweed, Diffuse": {
     "color": "A9A98F ", 
+    "count": 11, 
     "data_name": "Knapweed, Diffuse", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -361,6 +391,7 @@
   }, 
   "Knapweed, Spotted": {
     "color": "968D6A ", 
+    "count": 7205, 
     "data_name": "Knapweed, Spotted", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/spottedknapweed.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1630.jpg", 
@@ -370,6 +401,7 @@
   }, 
   "Knotweed, Giant": {
     "color": "98C245 ", 
+    "count": 7, 
     "data_name": "Knotweed, Giant", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -379,6 +411,7 @@
   }, 
   "Knotweed, Japanese": {
     "color": "ABB7BC ", 
+    "count": 27, 
     "data_name": "Knotweed, Japanese", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/japaneseknotweed.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1623.jpg", 
@@ -388,6 +421,7 @@
   }, 
   "Largemouth Bass Virus (LMBV)": {
     "color": "738536 ", 
+    "count": 6, 
     "data_name": "Largemouth Bass Virus (LMBV)", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -397,6 +431,7 @@
   }, 
   "Leafy Spurge": {
     "color": "63A290 ", 
+    "count": 22, 
     "data_name": "Leafy Spurge", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/leafyspurge.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1624.jpg", 
@@ -406,6 +441,7 @@
   }, 
   "Locust, Black": {
     "color": "9BBB6D ", 
+    "count": 199, 
     "data_name": "Locust, Black", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/blacklocust.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1636.jpg", 
@@ -415,6 +451,7 @@
   }, 
   "Loosestrife, Purple": {
     "color": "8A7E88 ", 
+    "count": 186, 
     "data_name": "Loosestrife, Purple", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1634.jpg", 
@@ -424,6 +461,7 @@
   }, 
   "Maple, Amur": {
     "color": "8CAB6F ", 
+    "count": 488, 
     "data_name": "Maple, Amur", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/amurmaple.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1635.jpg", 
@@ -433,6 +471,7 @@
   }, 
   "Maple, Norway": {
     "color": "579323", 
+    "count": 14, 
     "data_name": "Maple, Norway", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/norwaymaple.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1641.jpg", 
@@ -442,6 +481,7 @@
   }, 
   "Mullein, Common": {
     "color": "A8A292 ", 
+    "count": 122, 
     "data_name": "Mullein, Common", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -451,6 +491,7 @@
   }, 
   "Mustard, Garlic": {
     "color": "92A362 ", 
+    "count": 597, 
     "data_name": "Mustard, Garlic", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/garlicmustard.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1620.jpg", 
@@ -487,6 +528,7 @@
   }, 
   "Olive, Autumn": {
     "color": "847961 ", 
+    "count": 3, 
     "data_name": "Olive, Autumn", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -496,6 +538,7 @@
   }, 
   "Olive, Russian": {
     "color": "91AE9E ", 
+    "count": 258, 
     "data_name": "Olive, Russian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/russianolive.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1642.jpg", 
@@ -505,6 +548,7 @@
   }, 
   "Parsnip, Wild": {
     "color": "D79F28 ", 
+    "count": 6318, 
     "data_name": "Parsnip, Wild", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/wildparsnip.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1632.jpg", 
@@ -514,6 +558,7 @@
   }, 
   "Peashrub, Siberian": {
     "color": "8F9233 ", 
+    "count": 639, 
     "data_name": "Peashrub, Siberian", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -523,6 +568,7 @@
   }, 
   "Phragmites (Haplotype M)": {
     "color": "8C654C ", 
+    "count": 114, 
     "data_name": "Phragmites (Haplotype M)", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/phragmites/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_3124.jpg", 
@@ -532,6 +578,7 @@
   }, 
   "Poison ivy": {
     "color": "77CA91 ", 
+    "count": 9, 
     "data_name": "Poison ivy", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -541,6 +588,7 @@
   }, 
   "Purple Loosestrife": {
     "color": "91AE6E ", 
+    "count": 113, 
     "data_name": "Purple Loosestrife", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1634.jpg", 
@@ -550,6 +598,7 @@
   }, 
   "Queen Ann's Lace": {
     "color": "9E9C6D ", 
+    "count": 144, 
     "data_name": "Queen Ann's Lace", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/queenannslace.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1629.jpg", 
@@ -559,6 +608,7 @@
   }, 
   "Reed Canary Grass": {
     "color": "91A467 ", 
+    "count": 8750, 
     "data_name": "Reed Canary Grass", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/reedcanarygrass.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1646.jpg", 
@@ -568,6 +618,7 @@
   }, 
   "Rose, Multi-Flora": {
     "color": "A1A8A0 ", 
+    "count": 10, 
     "data_name": "Rose, Multi-Flora", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/multiflorarose/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_3125.jpg", 
@@ -577,6 +628,7 @@
   }, 
   "Russian Olive": {
     "color": "827A31 ", 
+    "count": 23, 
     "data_name": "Russian Olive", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/russianolive.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1642.jpg", 
@@ -595,6 +647,7 @@
   }, 
   "Siberian Elm": {
     "color": "8EA36B ", 
+    "count": 11, 
     "data_name": "Siberian Elm", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianelm.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1643.jpg", 
@@ -604,6 +657,7 @@
   }, 
   "Siberian Pea Shrub": {
     "color": "939858 ", 
+    "count": 59, 
     "data_name": "Siberian Pea Shrub", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianpeashrub.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1644.jpg", 
@@ -613,6 +667,7 @@
   }, 
   "Spurge, Cypress": {
     "color": "AACB47 ", 
+    "count": 7, 
     "data_name": "Spurge, Cypress", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -622,6 +677,7 @@
   }, 
   "Spurge, Leafy": {
     "color": "57926A ", 
+    "count": 1412, 
     "data_name": "Spurge, Leafy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/leafyspurge.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1624.jpg", 
@@ -631,6 +687,7 @@
   }, 
   "St. John's-Wort, Common": {
     "color": "CFAC0C ", 
+    "count": 100, 
     "data_name": "St. John's-Wort, Common", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -640,6 +697,7 @@
   }, 
   "Sweetclover, White": {
     "color": "DAD5A5", 
+    "count": 2880, 
     "data_name": "Sweetclover, White", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/whitesweetclover.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1631.jpg", 
@@ -649,6 +707,7 @@
   }, 
   "Sweetclover, Yellow": {
     "color": "A2981B", 
+    "count": 1264, 
     "data_name": "Sweetclover, Yellow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/whitesweetclover.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1631.jpg", 
@@ -658,6 +717,7 @@
   }, 
   "Tansy": {
     "color": "A49418 ", 
+    "count": 12893, 
     "data_name": "Tansy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/commontansy.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1615.jpg", 
@@ -667,6 +727,7 @@
   }, 
   "Tansy, Common": {
     "color": "CBB130 ", 
+    "count": 2467, 
     "data_name": "Tansy, Common", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/commontansy.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1615.jpg", 
@@ -676,6 +737,7 @@
   }, 
   "Teasel, Cut-Leaved": {
     "color": "929B6B ", 
+    "count": 5, 
     "data_name": "Teasel, Cut-Leaved", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -685,6 +747,7 @@
   }, 
   "Thistle spp.": {
     "color": "8F9C57 ", 
+    "count": 19507, 
     "data_name": "Thistle spp.", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -694,6 +757,7 @@
   }, 
   "Thistle, Bull": {
     "color": "8D6D36 ", 
+    "count": 1694, 
     "data_name": "Thistle, Bull", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/bullthistle.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1612.jpg", 
@@ -703,6 +767,7 @@
   }, 
   "Thistle, Canada": {
     "color": "9E9BA5 ", 
+    "count": 10435, 
     "data_name": "Thistle, Canada", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/canadathistle.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1614.jpg", 
@@ -712,6 +777,7 @@
   }, 
   "Thistle, Musk/Nodding": {
     "color": "8B6952 ", 
+    "count": 331, 
     "data_name": "Thistle, Musk/Nodding", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/muskthistle.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1625.jpg", 
@@ -721,6 +787,7 @@
   }, 
   "Thistle, Plumeless": {
     "color": "929B66 ", 
+    "count": 1509, 
     "data_name": "Thistle, Plumeless", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -730,6 +797,7 @@
   }, 
   "Thistle, Sow": {
     "color": "A29918 ", 
+    "count": 1064, 
     "data_name": "Thistle, Sow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/perennialsowthistle.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1628.jpg", 
@@ -739,6 +807,7 @@
   }, 
   "Trefoil, Birdsfoot": {
     "color": "A29860 ", 
+    "count": 2840, 
     "data_name": "Trefoil, Birdsfoot", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/birdsfoottrefoil.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1611.jpg", 
@@ -748,6 +817,7 @@
   }, 
   "Vetch": {
     "color": "87A775 ", 
+    "count": 5, 
     "data_name": "Vetch", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -757,6 +827,7 @@
   }, 
   "Vetch, Cow": {
     "color": "93B638 ", 
+    "count": 599, 
     "data_name": "Vetch, Cow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/cowvetch.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1616.jpg", 
@@ -766,6 +837,7 @@
   }, 
   "Vetch, Crown": {
     "color": "9A8C68 ", 
+    "count": 513, 
     "data_name": "Vetch, Crown", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/crownvetch.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1618.jpg", 
@@ -775,6 +847,7 @@
   }, 
   "Vetch, Hairy": {
     "color": "8CAA69 ", 
+    "count": 301, 
     "data_name": "Vetch, Hairy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/cowvetch.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1616.jpg", 
@@ -784,6 +857,7 @@
   }, 
   "alewife": {
     "color": "979FA2 ", 
+    "count": 47, 
     "data_name": "alewife", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -793,6 +867,7 @@
   }, 
   "bighead carp": {
     "color": "F7F7F7 g", 
+    "count": 2, 
     "data_name": "bighead carp", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/asiancarp/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1561.jpg", 
@@ -802,6 +877,7 @@
   }, 
   "curly-leaf pondweed": {
     "color": "9C8F6E ", 
+    "count": 730, 
     "data_name": "curly-leaf pondweed", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/curlyleaf_pondweed.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1449.jpg", 
@@ -811,6 +887,7 @@
   }, 
   "flowering rush": {
     "color": "91A738 ", 
+    "count": 16, 
     "data_name": "flowering rush", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/floweringrush.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1619.jpg", 
@@ -820,6 +897,7 @@
   }, 
   "goldfish": {
     "color": "C34D1F ", 
+    "count": 20, 
     "data_name": "goldfish", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -829,6 +907,7 @@
   }, 
   "grass carp": {
     "color": "6B837B ", 
+    "count": 12, 
     "data_name": "grass carp", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/grasscarp/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1879.jpg", 
@@ -838,6 +917,7 @@
   }, 
   "purple loosestrife": {
     "color": "9AA694 ", 
+    "count": 2429, 
     "data_name": "purple loosestrife", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1634.jpg", 
@@ -847,6 +927,7 @@
   }, 
   "rainbow smelt": {
     "color": "C89D73 ", 
+    "count": 123, 
     "data_name": "rainbow smelt", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -856,6 +937,7 @@
   }, 
   "round goby": {
     "color": "9F876E ", 
+    "count": 6, 
     "data_name": "round goby", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/roundgoby/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1456.jpg", 
@@ -865,6 +947,7 @@
   }, 
   "ruffe": {
     "color": "8E6D56 ", 
+    "count": 51, 
     "data_name": "ruffe", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/ruffe/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1453.jpg", 
@@ -874,6 +957,7 @@
   }, 
   "sea lamprey": {
     "color": "A5703C ", 
+    "count": 32, 
     "data_name": "sea lamprey", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/sealamprey/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1458.jpg", 
@@ -883,6 +967,7 @@
   }, 
   "spiny waterflea": {
     "color": "EAEAEA ", 
+    "count": 42, 
     "data_name": "spiny waterflea", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/spinywaterflea/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1454.jpg", 
@@ -892,6 +977,7 @@
   }, 
   "threespine stickleback": {
     "color": "73A2C3 ", 
+    "count": 18, 
     "data_name": "threespine stickleback", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -901,6 +987,7 @@
   }, 
   "tubenose goby": {
     "color": "938B6D ", 
+    "count": 7, 
     "data_name": "tubenose goby", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -910,6 +997,7 @@
   }, 
   "white perch": {
     "color": "C6B9A0 ", 
+    "count": 28, 
     "data_name": "white perch", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/whiteperch/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1460.jpg", 
@@ -919,6 +1007,7 @@
   }, 
   "zebra mussel": {
     "color": "968D6F ", 
+    "count": 39, 
     "data_name": "zebra mussel", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/zebramussel/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1452.jpg", 

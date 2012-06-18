@@ -12,6 +12,7 @@ import re
 import urllib2
 import csv
 import json
+import psycopg2
 
 from fabric.api import *
 
@@ -300,6 +301,9 @@ def vdata_counts():
   """
   Determines counts of species.
   """
+  vdata_load_csv()
+  vdata_load_data()
+  
   path = os.path.dirname(__file__)
   remote_file = 'https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip'
   local_file = os.path.join(path, '../data/combined_dnr_shapefile.zip')
@@ -309,7 +313,7 @@ def vdata_counts():
   if not os.path.isfile(local_file):
     local('wget -O %s %s' % (local_file, remote_file))
   else:
-    print 'File already downloaded'
+    print 'File already downloaded.'
     
   # Unzip if not already
   if not os.path.isdir(local_dir):
@@ -322,4 +326,43 @@ def vdata_counts():
         new = f.replace('20120613-combined-DNR Invasive Species', 'combined_dnr_shapefile')
         os.rename(os.path.join(local_dir, f), os.path.join(local_dir, new))
   else:
-    print 'File already unzipped'
+    print 'File already unzipped.'
+    
+  # Open up DB
+  pg_creds = 'host=localhost user=postgres dbname=minnpost'
+  table = 'combined_dnr_shapefile'
+  conn = psycopg2.connect(pg_creds)
+  db = conn.cursor()
+  
+  # Import into PostGIS if needed, check if table exists
+  db.execute("SELECT COUNT(*) FROM pg_tables WHERE tablename = 'combined_dnr_shapefile';")
+  imported = db.fetchone()
+  if imported == 0 or imported == None:
+    shp_file = os.path.join(local_dir, 'combined_dnr_shapefile.shp')
+    local('ogr2ogr -f "PostgreSQL" PG:"%s" %s' % (pg_creds, shp_file))
+  else:
+    print 'Already imported shapefile.'
+  
+  # Get counts and update
+  db.execute("""
+  SELECT com_name AS name, COUNT(com_name) AS count
+  FROM combined_dnr_shapefile
+  WHERE com_name <> ''
+  GROUP BY com_name
+  UNION
+  SELECT common_nam AS name, COUNT(common_nam) AS count
+  FROM combined_dnr_shapefile
+  WHERE common_nam <> ''
+  GROUP BY common_nam
+  """)
+  counts = db.fetchall()
+  for c in counts:
+    if c[0] in env.vdata_json:
+      env.vdata_json[c[0]]['count'] = c[1]
+  
+  # Close db connections
+  db.close()
+  conn.close()
+    
+  # Save data
+  vdata_save_data()
