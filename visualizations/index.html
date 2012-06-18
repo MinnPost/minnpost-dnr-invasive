@@ -146,6 +146,23 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         float: right;
         margin: 13px 16px 0 0;
       }
+      
+      a.label-toggler {
+        background: #BBBBBB;
+        background: rgba(255, 255, 255, 0.7);
+        overflow: hidden;
+        display: block;
+        vertical-align: text-top;
+        opacity: 0.9;
+        margin: 0 0 0 5px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        margin: 0 0 10px 10px;
+        padding: 2px 6px;
+        font-size: .85em;
+        color: #111111;
+      }
     </style>
     
     <div id="minnpost-invasive-species-application">
@@ -292,22 +309,47 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             { attribution: attribution, scheme: 'tms' });
           map.addLayer(minnpost);
           
+          // Labels layer with button to turn off and on
+          var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
+            'minnpost-minnesota-night-labels/{z}/{x}/{y}.png';
+          var minnpostLabels = new L.TileLayer(tiles, { scheme: 'tms' });
+          $('.leaflet-control-container .leaflet-bottom.leaflet-left')
+            .append(
+              $('<a>Show labels</a>').addClass('label-toggler')
+                .addClass('label-toggler-on')
+                .click(function(e) {
+                  $thisA = $(this);
+                  if ($thisA.hasClass('label-toggler-on')) {
+                    $thisA.html('Hide labels');
+                    map.addLayer(minnpostLabels);
+                  }
+                  else {
+                    $thisA.html('Show labels');
+                    map.removeLayer(minnpostLabels);
+                  }
+                  $thisA.toggleClass('label-toggler-on');
+                })
+            );
+          
           // Tilejson layer of species
           var metadata = 'http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp';
           wax.tilejson(metadata, function(tilejson) {
             // Hack the planet (aka the tilejson)
             tilejson.scheme = 'tms';
+            // For testing purposes, use S3 directly as opposed to Cloudfront.
+            /*
             tilejson.tiles = [
               'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
             ];
             tilejson.grids = [
               'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
             ];
+            */
     
-          // Move attributioin to footnotes
-          map.attributionControl.setPrefix('');
-          $('.footnote').html($('.footnote').html() + ' ' + map.attributionControl._container.innerHTML);
-          map.removeControl(map.attributionControl);
+            // Move attributioin to footnotes
+            map.attributionControl.setPrefix('');
+            $('.footnote').html($('.footnote').html() + ' ' + map.attributionControl._container.innerHTML);
+            map.removeControl(map.attributionControl);
           
             // Add layer and interaction
             map.addLayer(new wax.leaf.connector(tilejson));
