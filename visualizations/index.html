@@ -90,11 +90,11 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
       .color-bar {
         width: 100%;
         height: 25px;
+        margin-bottom: 1em;
       }
       
       .scientific-name {
         font-style: italic;
-        margin-bottom: 1em;
       }
       
       .wp-thumb {
@@ -108,12 +108,46 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         margin-top: 1em;
         padding: 1em;
       }
+      
+      #minnpost-invasive-species-application table {
+        width: 100%;
+        margin-top: 1em;
+      }
+      #minnpost-invasive-species-application table tr {
+        border-bottom: 1px solid #BBBBBB;
+        font-size: .85em;
+      }
+      #minnpost-invasive-species-application table tr td {
+        padding: 2px 5px;
+      }
+      
+    a.popup-close {
+      background: #BBBBBB;
+      background: rgba(255, 255, 255, 0.7);
+      text-indent:-3000px;
+      overflow: hidden;
+      display: block;
+      display: inline-block;
+      vertical-align: text-top;
+      background-image: url("https://s3.amazonaws.com/data.minnpost/js/bootstrap-2.0.3/img/glyphicons-halflings.png");
+      background-repeat: no-repeat;
+      background-position: -310px 2px;
+      opacity: 0.9;
+      width: 18px;
+      height: 18px;
+      margin: 0 0 0 5px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      float: right;
+      margin: 13px 16px 0 0;
+    }
     </style>
     
     <div id="minnpost-invasive-species-application">
       
       <div id="map"></div>
-      <p class="footnote"></p>
+      <p class="footnote">Data from the <a href="http://deli.dnr.state.mn.us/" target="_blank">Minnesota DNR Data Deli</a>.</p>
       
     </div>
     
@@ -137,37 +171,37 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   <% if (md.LOCALITY != '') { %><%= md.LOCALITY %>. <% } %>
                 </td>
               </tr>
-              <% if (md.ACRES_INF != '' || md.ACRES_INF != 0) { %>
+              <% if (md.ACRES_INF != '' && md.ACRES_INF != 0) { %>
                 <tr class="area-infected">
                   <td>Area infected</td>
                   <td><%= md.ACRES_INF %></td>
                 </tr>
               <% } %>
-              <% if (md.NUM_PLANTS != '' || md.NUM_PLANTS != 0) { %>
+              <% if (md.NUM_PLANTS != '' && md.NUM_PLANTS != 0) { %>
                 <tr class="number-observed">
                   <td>Number observed</td>
                   <td><%= md.NUM_PLANTS %></td>
                 </tr>
               <% } %>
-              <% if (md.PLANT_DIST != '' || md.PLANT_DIST != 0) { %>
+              <% if (md.PLANT_DIST != '' && md.PLANT_DIST != 0) { %>
                 <tr class="description">
                   <td>Description</td>
                   <td><%= md.PLANT_DIST %></td>
                 </tr>
               <% } %>
-              <% if (md.FIRST_OBS != '' || md.FIRST_OBS != 0) { %>
+              <% if (md.FIRST_OBS != '' && md.FIRST_OBS != 0) { %>
                 <tr class="observed">
                   <td>First observed</td>
                   <td><%= md.PLANT_DIST %></td>
                 </tr>
               <% } %>
-              <% if (md.DATE != '' || md.DATE != 0) { %>
+              <% if (md.DATE != '' && md.DATE != 0) { %>
                 <tr class="observed">
                   <td>First observed</td>
                   <td><%= md.DATE %></td>
                 </tr>
               <% } %>
-              <% if (sm.wp != '') { %>
+              <% if (!_.isUndefined(sm.wp) && sm.wp != '') { %>
                 <tr class="more-info-links">
                   <td>More info</td>
                   <td><a href="<%= sm.wp %>" target="_blank">Wikipedia article</a></td>
@@ -176,7 +210,9 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             </tbody>
           </table>
           
-          <img class="wp-thumb" src="<%= sm.wp_thumb %>" />
+          <% if (!_.isUndefined(sm.wp_thumb) || sm.wp_thumb != '') { %>
+            <img class="wp-thumb" src="<%= sm.wp_thumb %>" />
+          <% } %>
         </div>
       <div class="popup-contents-wrapper">
     </script>
@@ -186,7 +222,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     </script>
     <script id="template-popup-contents-empty" type="text/template">
       <div class="popup-contents-wrapper">
-        <div class="help">Mouse over the dots on the map to see which species they are.</div>
+        <div class="help">Mouse over the dots on the map to see species; click one to keep the information open.</div>
       </div>
     </script>
   
@@ -208,6 +244,12 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
           // Settings and placeholders
           var sm = {};
           var dataDir = './data/';
+          var popupOpen = false;
+          
+          // Check if we are not on localhost
+          if (location.host.indexOf('localhost') == -1) {
+            dataDir = 'https://s3.amazonaws.com/data.minnpost/projects/minnpost-dnr-invasive/data/';
+          }
           
           // Create map
           var center = new L.LatLng(46.483264729155586, -91.2740625);
@@ -261,36 +303,56 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
               .tilejson(tilejson)
               .on({
                 on: function(e) {
+                  // If popup is open, then no worries.
+                  if (popupOpen) {
+                    return;
+                  }
+                
                   // Event handling as defined in wax
+                  var addClose = '';
                   if ((e.e.type === 'mousemove' || !e.e.type)) {
-                    // Mouseover
+                    // Mouseover 
                     map._container.style.cursor = 'pointer';
-                    var tData = { 'md': e.data, 'sm': {} };
-                    var $popup = $('.map-popup-container');
-                    
-                    // Check metada
-                    tData.title = (e.data.COMMON_NAM == '') ? e.data.COM_NAME :
-                      e.data.COMMON_NAM;
-                    if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
-                      tData.sm = sm[tData.title];
-                      if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name != '') {
-                        tData.title = sm[tData.title].site_name;
-                      }
-                    }
-                    
-                    // Display popup
-                    if (!_.isEmpty(tData) && tData.title != '') {
-                      $popup.html(_.template($("#template-popup-contents").html(), tData));
-                      $popup.fadeIn('fast');
-                    }
                   }
                   else {
                     // Popup
+                    popupOpen = true;
+                    addClose = $('<a>close</a>').addClass('popup-close')
+                      .attr('href', '#')
+                      .click(function(e) {
+                        e.preventDefault();
+                        $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
+                        popupOpen = false;
+                      });
+                  }
+                  
+                  // Handle data
+                  var tData = { 'md': e.data, 'sm': {} };
+                  var $popup = $('.map-popup-container');
+                  
+                  // Check metada
+                  tData.title = (e.data.COMMON_NAM == '') ? e.data.COM_NAME :
+                    e.data.COMMON_NAM;
+                  if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
+                    tData.sm = sm[tData.title];
+                    if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name != '') {
+                      tData.title = sm[tData.title].site_name;
+                    }
+                  }
+                  
+                  // Display popup
+                  if (!_.isEmpty(tData) && tData.title != '') {
+                    $popup.html(_.template($("#template-popup-contents").html(), tData));
+                    $popup.prepend(addClose);
+                    $popup.fadeIn('fast');
                   }
                 },
                 off: function(e) {
                   map._container.style.cursor = 'default';
-                  $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
+                  
+                  if (!popupOpen) {
+                    $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
+                  }
                 }
               });
           });
