@@ -25,4 +25,5 @@ Data from the Minnesota DNR and their awesome [Data Deli](http://deli.dnr.state.
     * Generate thumbs from CSV, Wikipedia, and DBPedia: ```cd data-processing && fab vdata_get_thumbs; cd -;```
     * Get colors from [ColorSuckr](http://coloursuckr.com/): ```cd data-processing && fab vdata_get_colors:True; cd -;```
     * Put colors into TileMill project: ```cd data-processing && fab vdata_tile_colors; cd -;```
+    * Get extra DNR data via Scraper Wiki: ```cd data-processing && fab vdata_get_dnr_data; cd -;```
 * Export tiles to S3: ```cd data-processing/tiles && fab map:mn-invasive production export_deploy:32,4,5; cd -;```

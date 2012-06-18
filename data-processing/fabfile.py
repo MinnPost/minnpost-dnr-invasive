@@ -229,7 +229,6 @@ def vdata_get_colors(update=False):
   vdata_save_data()
   
 
-
 def vdata_tile_colors():
   """
   Read in data from JSON, create colors.mss
@@ -257,3 +256,41 @@ def vdata_tile_colors():
   outputf = open(spfile, 'w')
   outputf.write(output + "\n")
   outputf.close()
+
+
+def vdata_get_dnr_data():
+  """
+  Read in data from DNR Scraper for species.
+  https://scraperwiki.com/scrapers/mn_dnr_invasive_species/
+  """
+  vdata_load_csv()
+  vdata_load_data()
+
+  # Read scraper data
+  url = 'https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=mn_dnr_invasive_species&query=select%20*%20from%20%60swdata%60'
+  dnr_json = urllib2.urlopen(url).read()
+  dnr_results = json.loads(dnr_json)
+  
+  # Function to find data in scraper data
+  def find_dnr_entry(data, value):
+    found = None;
+    for d in data:
+      if d['name'] == value:
+        found = d
+        
+    return found
+      
+  
+  # Go through vdata and attach any relevant dnr data
+  for k in env.vdata_json:
+    sp = env.vdata_json[k]
+    found = find_dnr_entry(dnr_results, sp['site_name'])
+    if found <> None:
+      env.vdata_json[k]['dnr_thumb'] = found['thumb_url']
+      env.vdata_json[k]['dnr_link'] = found['link']
+    else:
+      env.vdata_json[k]['dnr_thumb'] = ''
+      env.vdata_json[k]['dnr_link'] = ''
+    
+  # Save data
+  vdata_save_data()
