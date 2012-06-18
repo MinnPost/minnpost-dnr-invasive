@@ -316,15 +316,22 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
               .tilejson(tilejson)
               .on({
                 on: function(e) {
-                  // If popup is open, then no worries.
-                  if (popupOpen) {
+                  // Event handling types borrowed from wax.
+                  //
+                  // If popup is open and mouseing over, do nothing.
+                  // If popup is open and click, open new popup. 
+                  //
+                  // If popup is not open and mouseing over, show new data.
+                  // If popup is not open and click, open new popup
+                  var addClose = '';
+                  
+                  // Mouse over and open
+                  if ((e.e.type === 'mousemove' || !e.e.type) && popupOpen) {
+                    map._container.style.cursor = 'pointer';
                     return;
                   }
-                
-                  // Event handling as defined in wax
-                  var addClose = '';
+                  // If mouseover, change cursor, but still open data
                   if ((e.e.type === 'mousemove' || !e.e.type)) {
-                    // Mouseover 
                     map._container.style.cursor = 'pointer';
                   }
                   else {
