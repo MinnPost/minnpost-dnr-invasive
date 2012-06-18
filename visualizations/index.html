@@ -288,7 +288,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
           var popupOpen = false;
           
           // Check if we are not on localhost
-          if (location.host.indexOf('localhost') == -1) {
+          if (location.host.indexOf('localhost') === -1) {
             dataDir = 'https://s3.amazonaws.com/data.minnpost/projects/minnpost-dnr-invasive/data/';
           }
           
@@ -306,8 +306,8 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
           $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
           
           // Base layers
-    	    var osmbaseurl = 'http://{s}.tiles.mapbox.com/v1/zzolo.map-rhqrrivf/{z}/{x}/{y}.png';
-      		var osmbaselayer = new L.TileLayer(osmbaseurl, { scheme: 'tms' });
+          var osmbaseurl = 'http://{s}.tiles.mapbox.com/v1/zzolo.map-rhqrrivf/{z}/{x}/{y}.png';
+          var osmbaselayer = new L.TileLayer(osmbaseurl, { scheme: 'tms' });
           map.addLayer(osmbaselayer);
           var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
             'minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png';
@@ -321,15 +321,15 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
           map.addLayer(minnpost);
           
           // Labels layer with button to turn off and on
-          var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
+          var tilesLabels = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
             'minnpost-minnesota-night-labels/{z}/{x}/{y}.png';
-          var minnpostLabels = new L.TileLayer(tiles, { scheme: 'tms' });
+          var minnpostLabels = new L.TileLayer(tilesLabels, { scheme: 'tms' });
           $('.leaflet-control-container .leaflet-bottom.leaflet-left')
             .append(
               $('<a>Show labels</a>').addClass('label-toggler')
                 .addClass('label-toggler-on')
                 .click(function(e) {
-                  $thisA = $(this);
+                  var $thisA = $(this);
                   if ($thisA.hasClass('label-toggler-on')) {
                     $thisA.html('Hide labels');
                     map.addLayer(minnpostLabels);
@@ -404,17 +404,17 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   var $popup = $('.map-popup-container');
                   
                   // Check metada
-                  tData.title = (e.data.COMMON_NAM == '') ? e.data.COM_NAME :
+                  tData.title = (e.data.COMMON_NAM === '') ? e.data.COM_NAME :
                     e.data.COMMON_NAM;
                   if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
                     tData.sm = sm[tData.title];
-                    if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name != '') {
+                    if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name !== '') {
                       tData.title = sm[tData.title].site_name;
                     }
                   }
                   
                   // Display popup
-                  if (!_.isEmpty(tData) && tData.title != '') {
+                  if (!_.isEmpty(tData) && tData.title !== '') {
                     $popup.html(_.template($("#template-popup-contents").html(), tData));
                     $popup.prepend(addClose);
                     $popup.fadeIn('fast');
@@ -450,15 +450,15 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             var found = false;
             for (i in sm) {
               // Check for count first
-              if (_.isUndefined(sm[i].count) || sm[i].count == 0) {
+              if (_.isUndefined(sm[i].count) || sm[i].count === 0) {
                 continue;
               }
               
               // Check if there already a counted site_name
-              if (!_.isUndefined(sm[i].site_name) && sm[i].site_name != '') {
+              if (!_.isUndefined(sm[i].site_name) && sm[i].site_name !== '') {
                 found = false;
                 for (j in gData) {
-                  if (gData[j][0] == sm[i].site_name) {
+                  if (gData[j][0] === sm[i].site_name) {
                     found = true;
                     // Update existing one
                     gData[j][1] += sm[i].count;
@@ -485,12 +485,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             var g;
             var c = 0;
             var data = new google.visualization.DataTable();
-            
-            // Format
-            var numF = new google.visualization.NumberFormat({
-              pattern: '###,###',
-            });
-            
             data.addRows(1);
             for (g in gData) {
               data.addColumn('number', gData[g][0]);
