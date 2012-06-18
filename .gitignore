@@ -4,3 +4,7 @@ data-processing/tiles/*/tiles-tmp
 data-processing/tiles/*/exports
 data-processing/tiles/*/cache
 data-processing/tiles/*/layers
+
+# Data
+data/combined_dnr_shapefile.zip
+data/combined_dnr_shapefile/*

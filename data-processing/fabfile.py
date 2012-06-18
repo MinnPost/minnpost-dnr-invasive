@@ -294,3 +294,32 @@ def vdata_get_dnr_data():
     
   # Save data
   vdata_save_data()
+  
+
+def vdata_counts():
+  """
+  Determines counts of species.
+  """
+  path = os.path.dirname(__file__)
+  remote_file = 'https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip'
+  local_file = os.path.join(path, '../data/combined_dnr_shapefile.zip')
+  local_dir = os.path.join(path, '../data/combined_dnr_shapefile')
+  
+  # Download file if it doesnt exist
+  if not os.path.isfile(local_file):
+    local('wget -O %s %s' % (local_file, remote_file))
+  else:
+    print 'File already downloaded'
+    
+  # Unzip if not already
+  if not os.path.isdir(local_dir):
+    local('mkdir -p %s' % (local_dir))
+    local('unzip -d %s %s' % (local_dir, local_file))
+    
+    # Rename the shapefiles
+    for f in os.listdir(local_dir):
+      if not f.startswith('.'):
+        new = f.replace('20120613-combined-DNR Invasive Species', 'combined_dnr_shapefile')
+        os.rename(os.path.join(local_dir, f), os.path.join(local_dir, new))
+  else:
+    print 'File already unzipped'
