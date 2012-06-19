@@ -1,6 +1,6 @@
 species_metadata_callback({
   "Absinthe wormwood": {
-    "color": "8CA269 ", 
+    "color": "7D8F76", 
     "count": 1, 
     "data_name": "Absinthe wormwood", 
     "dnr_link": "", 
@@ -10,7 +10,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Artemisia_absinthium_P1210748.jpg/200px-Artemisia_absinthium_P1210748.jpg"
   }, 
   "Alyssum, Hoary": {
-    "color": "9FA4A4 ", 
+    "color": "E6E9ED", 
     "count": 896, 
     "data_name": "Alyssum, Hoary", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/hoaryalyssum.html", 
@@ -20,7 +20,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Berteroa_incana.jpg/220px-Berteroa_incana.jpg"
   }, 
   "Barberry, Japanese": {
-    "color": "BBBFC2 ", 
+    "color": "B34134", 
     "count": 16, 
     "data_name": "Barberry, Japanese", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/japanesebarberry.html", 
@@ -30,7 +30,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Berberis_thunb_frt.jpg/240px-Berberis_thunb_frt.jpg"
   }, 
   "Bittercress, Narrowleaf": {
-    "color": "8A9F2C ", 
+    "color": "8A9E2C", 
     "count": 1, 
     "data_name": "Bittercress, Narrowleaf", 
     "dnr_link": "", 
@@ -40,7 +40,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Cardamine_oligosperma_6649.JPG/200px-Cardamine_oligosperma_6649.JPG"
   }, 
   "Bittersweet, Asian": {
-    "color": "983224 ", 
+    "color": "984A22", 
     "count": 3, 
     "data_name": "Bittersweet, Asian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/oriental_bittersweet.html", 
@@ -50,7 +50,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Celastrus_orbiculatus.jpg/200px-Celastrus_orbiculatus.jpg"
   }, 
   "Black Locust": {
-    "color": "899F72 ", 
+    "color": "EBEDE3", 
     "count": 124, 
     "data_name": "Black Locust", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/blacklocust.html", 
@@ -60,7 +60,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Robina9146.JPG/200px-Robina9146.JPG"
   }, 
   "Brazilian elodea": {
-    "color": "96941F ", 
+    "color": "708A12", 
     "data_name": "Brazilian elodea", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/brazilianelodea/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_3106.jpg", 
@@ -69,7 +69,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Elodea_canadensis2_ies.jpg/200px-Elodea_canadensis2_ies.jpg"
   }, 
   "Brittle naiad": {
-    "color": "BABBC8 ", 
+    "color": "4C5033", 
     "data_name": "Brittle naiad", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -78,7 +78,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Brittle_naiad.jpg/200px-Brittle_naiad.jpg"
   }, 
   "Buckthorn, Common": {
-    "color": "949A5E ", 
+    "color": "4E5E30", 
     "count": 6996, 
     "data_name": "Buckthorn, Common", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/buckthorn/index.html", 
@@ -88,7 +88,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Rhamnus_frangula.jpg/220px-Rhamnus_frangula.jpg"
   }, 
   "Buckthorn, Glossy": {
-    "color": "A7AD9C ", 
+    "color": "4E5E30", 
     "count": 255, 
     "data_name": "Buckthorn, Glossy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/buckthorn/index.html", 
@@ -98,7 +98,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Rhamnus_frangula.jpg/220px-Rhamnus_frangula.jpg"
   }, 
   "Burdock": {
-    "color": "8F6881 ", 
+    "color": "8F6880", 
     "count": 57, 
     "data_name": "Burdock", 
     "dnr_link": "", 
@@ -108,7 +108,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Villtakjas_2008.jpg/200px-Villtakjas_2008.jpg"
   }, 
   "Butter and Eggs": {
-    "color": "8A7757 ", 
+    "color": "B6AD4A", 
     "count": 232, 
     "data_name": "Butter and Eggs", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/butterandeggs.html", 
@@ -118,7 +118,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Linaria_vulgaris_20050825_976.jpg/200px-Linaria_vulgaris_20050825_976.jpg"
   }, 
   "Chinese and Banded Mystery Snails": {
-    "color": "CED2B2 ", 
+    "color": "D2B04D", 
     "data_name": "Chinese and Banded Mystery Snails", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/chinese_banded_mysterysnails.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_2699.jpg", 
@@ -127,7 +127,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pomacea.jpg/200px-Pomacea.jpg"
   }, 
   "Common carp": {
-    "color": "C6AE71 ", 
+    "color": "876C38", 
     "data_name": "Common carp", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/commoncarp/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1871.jpg", 
@@ -136,7 +136,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Common_carp.jpg/200px-Common_carp.jpg"
   }, 
   "Creeping Charlie": {
-    "color": "9EC945 ", 
+    "color": "AD95A9", 
     "count": 220, 
     "data_name": "Creeping Charlie", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/creepingcharlie.html", 
@@ -166,7 +166,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Dame%27s_rocket.jpg/220px-Dame%27s_rocket.jpg"
   }, 
   "Earthworms": {
-    "color": "8D7C85 ", 
+    "color": "8A6F64", 
     "data_name": "Earthworms", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialanimals/earthworms/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1461.jpg", 
@@ -185,7 +185,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Inula_helenium_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-210.jpg/220px-Inula_helenium_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-210.jpg"
   }, 
   "Elm, Siberian": {
-    "color": "728A5E ", 
+    "color": "6B9153", 
     "count": 666, 
     "data_name": "Elm, Siberian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianelm.html", 
@@ -195,7 +195,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ulmus_pumila.jpg/220px-Ulmus_pumila.jpg"
   }, 
   "Emerald ash borer": {
-    "color": "70AA89 ", 
+    "color": "378751", 
     "data_name": "Emerald ash borer", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialanimals/eab/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_2629.jpg", 
@@ -204,7 +204,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Agrilus_planipennis_001.jpg/200px-Agrilus_planipennis_001.jpg"
   }, 
   "Eurasian watermilfoil": {
-    "color": "B5CB92 ", 
+    "color": "739150", 
     "count": 224, 
     "data_name": "Eurasian watermilfoil", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/milfoil/index.html", 
@@ -214,7 +214,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Cleaned-Illustration_Myriophyllum_spicatum.jpg/200px-Cleaned-Illustration_Myriophyllum_spicatum.jpg"
   }, 
   "European Starling": {
-    "color": "8B5239 ", 
+    "color": "887666", 
     "data_name": "European Starling", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialanimals/europeanstarling/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_3122.jpg", 
@@ -223,7 +223,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Sturnus_vulgaris_-England_-standing-8.jpg/300px-Sturnus_vulgaris_-England_-standing-8.jpg"
   }, 
   "False spiraea": {
-    "color": "8DA772 ", 
+    "color": "739988", 
     "data_name": "False spiraea", 
     "dnr_link": "", 
     "dnr_thumb": "", 
@@ -232,7 +232,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/SorbariaSorbifolia3.jpg/200px-SorbariaSorbifolia3.jpg"
   }, 
   "Faucet Snail": {
-    "color": "8D8E34 ", 
+    "color": "91932F", 
     "data_name": "Faucet Snail", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/faucet_snail/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_2689.jpg", 
@@ -241,7 +241,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Bithynia_tentaculata.jpg/200px-Bithynia_tentaculata.jpg"
   }, 
   "Foxglove, Grecian": {
-    "color": "95976B ", 
+    "color": "8F685A", 
     "count": 28, 
     "data_name": "Foxglove, Grecian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/grecianfoxglove.html", 
@@ -251,7 +251,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Digitalis_lanata_1.JPG/200px-Digitalis_lanata_1.JPG"
   }, 
   "Garlic Mustard": {
-    "color": "9DB64D ", 
+    "color": "9DB64D", 
     "count": 101, 
     "data_name": "Garlic Mustard", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/garlicmustard.html", 
@@ -261,7 +261,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg/200px-Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg"
   }, 
   "Grass, Amur silver": {
-    "color": "95BA45 ", 
+    "color": "8BCD37", 
     "count": 179, 
     "data_name": "Grass, Amur silver", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/amursilvergrass.html", 
@@ -271,7 +271,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Miscanthus_sacchariflorus_-_Berlin_Botanical_Garden_-_IMG_8593.JPG/200px-Miscanthus_sacchariflorus_-_Berlin_Botanical_Garden_-_IMG_8593.JPG"
   }, 
   "Grass, Cheat": {
-    "color": "B6BF88 ", 
+    "color": "659219", 
     "count": 11, 
     "data_name": "Grass, Cheat", 
     "dnr_link": "", 
@@ -281,7 +281,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Illustration_Bromus_tectorum0.jpg/220px-Illustration_Bromus_tectorum0.jpg"
   }, 
   "Grass, Kentucky bluegrass": {
-    "color": "AA7984 ", 
+    "color": "70884F", 
     "count": 27, 
     "data_name": "Grass, Kentucky bluegrass", 
     "dnr_link": "", 
@@ -291,7 +291,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Veldbeemdgras_Poa_pratensis.jpg/200px-Veldbeemdgras_Poa_pratensis.jpg"
   }, 
   "Grass, Reed canary": {
-    "color": "7E8273 ", 
+    "color": "B7CF6A", 
     "count": 18226, 
     "data_name": "Grass, Reed canary", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/reedcanarygrass.html", 
@@ -301,7 +301,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Phalaris_arundinacea_1.jpg/220px-Phalaris_arundinacea_1.jpg"
   }, 
   "Grass, Smooth brome": {
-    "color": "C4A179 ", 
+    "color": "7A8552", 
     "count": 2728, 
     "data_name": "Grass, Smooth brome", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/smoothbromegrass.html", 
@@ -320,7 +320,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lymantria_dispar_dispar_%28asian%29_male.jpg/220px-Lymantria_dispar_dispar_%28asian%29_male.jpg"
   }, 
   "Hawkweed, Orange": {
-    "color": "AC4724 ", 
+    "color": "D8650A", 
     "count": 1634, 
     "data_name": "Hawkweed, Orange", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/orangehawkweed.html", 
@@ -330,7 +330,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hieracium_aurantiacum_Saarland_03.jpg/200px-Hieracium_aurantiacum_Saarland_03.jpg"
   }, 
   "Heterosporis": {
-    "color": "98886E ", 
+    "color": "A45732", 
     "count": 12, 
     "data_name": "Heterosporis", 
     "dnr_link": "", 
@@ -340,7 +340,7 @@ species_metadata_callback({
     "wp_thumb": "http://images.dnr.state.mn.us/natural_resources/animals/fish/diseases/heterosporis_01.jpg"
   }, 
   "Hogweed, Giant": {
-    "color": "8EA45F ", 
+    "color": "91B13D", 
     "count": 11, 
     "data_name": "Hogweed, Giant", 
     "dnr_link": "", 
@@ -350,7 +350,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Reuzenbereklauw.JPG/220px-Reuzenbereklauw.JPG"
   }, 
   "Honeysuckle, Exotic": {
-    "color": "ACB36E ", 
+    "color": "DA738C", 
     "count": 3206, 
     "data_name": "Honeysuckle, Exotic", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/exotichoneysuckles.html", 
@@ -360,7 +360,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Totorinis_sausmedis.jpg/200px-Totorinis_sausmedis.jpg"
   }, 
   "Iris, Yellow": {
-    "color": "B3B354 ", 
+    "color": "EACE16", 
     "count": 7, 
     "data_name": "Iris, Yellow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/yellowiris.html", 
@@ -370,7 +370,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_pseudacorus_001.jpg/200px-Iris_pseudacorus_001.jpg"
   }, 
   "Japanese Barberry": {
-    "color": "B34134 ", 
+    "color": "B34134", 
     "count": 1, 
     "data_name": "Japanese Barberry", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/japanesebarberry.html", 
@@ -380,7 +380,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Berberis_thunb_frt.jpg/240px-Berberis_thunb_frt.jpg"
   }, 
   "Knapweed, Diffuse": {
-    "color": "A9A98F ", 
+    "color": "7A8456", 
     "count": 11, 
     "data_name": "Knapweed, Diffuse", 
     "dnr_link": "", 
@@ -390,7 +390,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Centaurea_diffusa1.jpg/200px-Centaurea_diffusa1.jpg"
   }, 
   "Knapweed, Spotted": {
-    "color": "968D6A ", 
+    "color": "CF63CB", 
     "count": 7205, 
     "data_name": "Knapweed, Spotted", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/spottedknapweed.html", 
@@ -400,7 +400,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Centaurea_maculosa.jpg/200px-Centaurea_maculosa.jpg"
   }, 
   "Knotweed, Giant": {
-    "color": "98C245 ", 
+    "color": "78C516", 
     "count": 7, 
     "data_name": "Knotweed, Giant", 
     "dnr_link": "", 
@@ -410,7 +410,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/26/GiantKnotweed053.jpg/200px-GiantKnotweed053.jpg"
   }, 
   "Knotweed, Japanese": {
-    "color": "ABB7BC ", 
+    "color": "6C9D54", 
     "count": 27, 
     "data_name": "Knotweed, Japanese", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/japaneseknotweed.html", 
@@ -420,7 +420,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Fallopia_japonica_MdE_2.jpg/200px-Fallopia_japonica_MdE_2.jpg"
   }, 
   "Largemouth Bass Virus (LMBV)": {
-    "color": "738536 ", 
+    "color": "38604B", 
     "count": 6, 
     "data_name": "Largemouth Bass Virus (LMBV)", 
     "dnr_link": "", 
@@ -430,7 +430,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Largemouth.JPG/200px-Largemouth.JPG"
   }, 
   "Leafy Spurge": {
-    "color": "63A290 ", 
+    "color": "B2BD42", 
     "count": 22, 
     "data_name": "Leafy Spurge", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/leafyspurge.html", 
@@ -440,7 +440,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Euphorbia_esula.jpeg/220px-Euphorbia_esula.jpeg"
   }, 
   "Locust, Black": {
-    "color": "9BBB6D ", 
+    "color": "EBEDE3", 
     "count": 199, 
     "data_name": "Locust, Black", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/blacklocust.html", 
@@ -450,7 +450,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Robina9146.JPG/200px-Robina9146.JPG"
   }, 
   "Loosestrife, Purple": {
-    "color": "8A7E88 ", 
+    "color": "9E24A0", 
     "count": 186, 
     "data_name": "Loosestrife, Purple", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
@@ -460,7 +460,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Purple_loosestrife2.jpg/220px-Purple_loosestrife2.jpg"
   }, 
   "Maple, Amur": {
-    "color": "8CAB6F ", 
+    "color": "586F4C", 
     "count": 488, 
     "data_name": "Maple, Amur", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/amurmaple.html", 
@@ -480,7 +480,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Spitz-Ahorn%28mbo%29.jpg.JPG/220px-Spitz-Ahorn%28mbo%29.jpg.JPG"
   }, 
   "Mullein, Common": {
-    "color": "A8A292 ", 
+    "color": "C7CA44", 
     "count": 122, 
     "data_name": "Mullein, Common", 
     "dnr_link": "", 
@@ -490,7 +490,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Starr_040723-0030_Verbascum_thapsus.jpg/200px-Starr_040723-0030_Verbascum_thapsus.jpg"
   }, 
   "Mustard, Garlic": {
-    "color": "92A362 ", 
+    "color": "9DB64D", 
     "count": 597, 
     "data_name": "Mustard, Garlic", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/garlicmustard.html", 
@@ -500,7 +500,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg/200px-Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg"
   }, 
   "Mute swan": {
-    "color": "9FA8A5 ", 
+    "color": "D9DDCC", 
     "data_name": "Mute swan", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialanimals/muteswan/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1870.jpg", 
@@ -509,7 +509,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CygneVaires.jpg/200px-CygneVaires.jpg"
   }, 
   "New Zealand Mud Snail": {
-    "color": "F2A156 ", 
+    "color": "F48F34", 
     "data_name": "New Zealand Mud Snail", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/nz_mudsnail/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1833.jpg", 
@@ -518,7 +518,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/P_antipodarum.jpg/200px-P_antipodarum.jpg"
   }, 
   "Non-native waterlilies": {
-    "color": "CDD06E ", 
+    "color": "AC63B7", 
     "data_name": "Non-native waterlilies", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/waterlilies.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_3000.jpg", 
@@ -527,7 +527,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/The_Lilly_Of_Life.JPG/200px-The_Lilly_Of_Life.JPG"
   }, 
   "Olive, Autumn": {
-    "color": "847961 ", 
+    "color": "59A23E", 
     "count": 3, 
     "data_name": "Olive, Autumn", 
     "dnr_link": "", 
@@ -537,7 +537,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Elaeagnus_umbellata1.jpg/200px-Elaeagnus_umbellata1.jpg"
   }, 
   "Olive, Russian": {
-    "color": "91AE9E ", 
+    "color": "ADAD5C", 
     "count": 258, 
     "data_name": "Olive, Russian", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/russianolive.html", 
@@ -547,7 +547,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Russian_Olive.jpg/220px-Russian_Olive.jpg"
   }, 
   "Parsnip, Wild": {
-    "color": "D79F28 ", 
+    "color": "D79F28", 
     "count": 6318, 
     "data_name": "Parsnip, Wild", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/wildparsnip.html", 
@@ -557,7 +557,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Parsnips-1.jpg/200px-Parsnips-1.jpg"
   }, 
   "Peashrub, Siberian": {
-    "color": "8F9233 ", 
+    "color": "788535", 
     "count": 639, 
     "data_name": "Peashrub, Siberian", 
     "dnr_link": "", 
@@ -567,7 +567,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Caragana_arborescens.jpg/220px-Caragana_arborescens.jpg"
   }, 
   "Phragmites (Haplotype M)": {
-    "color": "8C654C ", 
+    "color": "8D654B", 
     "count": 114, 
     "data_name": "Phragmites (Haplotype M)", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/phragmites/index.html", 
@@ -577,7 +577,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Phragmites_australis_Schilfrohr.jpg/200px-Phragmites_australis_Schilfrohr.jpg"
   }, 
   "Poison ivy": {
-    "color": "77CA91 ", 
+    "color": "5E9D23", 
     "count": 9, 
     "data_name": "Poison ivy", 
     "dnr_link": "", 
@@ -587,7 +587,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Toxicodendron_radicans.jpg/200px-Toxicodendron_radicans.jpg"
   }, 
   "Purple Loosestrife": {
-    "color": "91AE6E ", 
+    "color": "9E24A0", 
     "count": 113, 
     "data_name": "Purple Loosestrife", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
@@ -597,7 +597,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Purple_loosestrife2.jpg/220px-Purple_loosestrife2.jpg"
   }, 
   "Queen Ann's Lace": {
-    "color": "9E9C6D ", 
+    "color": "EEEDDB", 
     "count": 144, 
     "data_name": "Queen Ann's Lace", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/queenannslace.html", 
@@ -607,7 +607,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ammi_majus_Sturm8.jpg/200px-Ammi_majus_Sturm8.jpg"
   }, 
   "Reed Canary Grass": {
-    "color": "91A467 ", 
+    "color": "B7CF6A", 
     "count": 8750, 
     "data_name": "Reed Canary Grass", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/grasses/reedcanarygrass.html", 
@@ -617,7 +617,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Phalaris_arundinacea_1.jpg/220px-Phalaris_arundinacea_1.jpg"
   }, 
   "Rose, Multi-Flora": {
-    "color": "A1A8A0 ", 
+    "color": "E0DFE6", 
     "count": 10, 
     "data_name": "Rose, Multi-Flora", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/multiflorarose/index.html", 
@@ -627,7 +627,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Rosa-multiflora2.jpg/200px-Rosa-multiflora2.jpg"
   }, 
   "Russian Olive": {
-    "color": "827A31 ", 
+    "color": "ADAD5C", 
     "count": 23, 
     "data_name": "Russian Olive", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/russianolive.html", 
@@ -637,7 +637,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Russian_Olive.jpg/220px-Russian_Olive.jpg"
   }, 
   "Rusty crayfish": {
-    "color": "A09B5B ", 
+    "color": "936D45", 
     "data_name": "Rusty crayfish", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/rustycrayfish/index.html", 
     "dnr_thumb": "http://images.dnr.state.mn.us/sub_icons/s_1455.jpg", 
@@ -646,7 +646,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Orconectes_rusticus_in_Aquarium1.jpg/220px-Orconectes_rusticus_in_Aquarium1.jpg"
   }, 
   "Siberian Elm": {
-    "color": "8EA36B ", 
+    "color": "6B9153", 
     "count": 11, 
     "data_name": "Siberian Elm", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianelm.html", 
@@ -656,7 +656,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ulmus_pumila.jpg/220px-Ulmus_pumila.jpg"
   }, 
   "Siberian Pea Shrub": {
-    "color": "939858 ", 
+    "color": "788535", 
     "count": 59, 
     "data_name": "Siberian Pea Shrub", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/woody/siberianpeashrub.html", 
@@ -666,7 +666,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Caragana_arborescens.jpg/220px-Caragana_arborescens.jpg"
   }, 
   "Spurge, Cypress": {
-    "color": "AACB47 ", 
+    "color": "E0E62B", 
     "count": 7, 
     "data_name": "Spurge, Cypress", 
     "dnr_link": "", 
@@ -676,7 +676,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Euphorbia_cyparissias_02_bgiu.jpg/200px-Euphorbia_cyparissias_02_bgiu.jpg"
   }, 
   "Spurge, Leafy": {
-    "color": "57926A ", 
+    "color": "B2BD42", 
     "count": 1412, 
     "data_name": "Spurge, Leafy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/leafyspurge.html", 
@@ -686,7 +686,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Euphorbia_esula.jpeg/220px-Euphorbia_esula.jpeg"
   }, 
   "St. John's-Wort, Common": {
-    "color": "CFAC0C ", 
+    "color": "499F07", 
     "count": 100, 
     "data_name": "St. John's-Wort, Common", 
     "dnr_link": "", 
@@ -696,7 +696,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Saint_johns_wart_flowers.jpg/200px-Saint_johns_wart_flowers.jpg"
   }, 
   "Sweetclover, White": {
-    "color": "DAD5A5", 
+    "color": "A2981B", 
     "count": 2880, 
     "data_name": "Sweetclover, White", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/whitesweetclover.html", 
@@ -716,7 +716,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Melilotus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-093.jpg/220px-Melilotus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-093.jpg"
   }, 
   "Tansy": {
-    "color": "A49418 ", 
+    "color": "F3EC22", 
     "count": 12893, 
     "data_name": "Tansy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/commontansy.html", 
@@ -726,7 +726,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tansy_and_Queen_of_Spain_Fritilllary.JPG/200px-Tansy_and_Queen_of_Spain_Fritilllary.JPG"
   }, 
   "Tansy, Common": {
-    "color": "CBB130 ", 
+    "color": "F3EC22", 
     "count": 2467, 
     "data_name": "Tansy, Common", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/commontansy.html", 
@@ -736,7 +736,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tansy_and_Queen_of_Spain_Fritilllary.JPG/200px-Tansy_and_Queen_of_Spain_Fritilllary.JPG"
   }, 
   "Teasel, Cut-Leaved": {
-    "color": "929B6B ", 
+    "color": "8A3609", 
     "count": 5, 
     "data_name": "Teasel, Cut-Leaved", 
     "dnr_link": "", 
@@ -746,7 +746,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Dipsacus_fullonum1.jpg/200px-Dipsacus_fullonum1.jpg"
   }, 
   "Thistle spp.": {
-    "color": "8F9C57 ", 
+    "color": "C54DA1", 
     "count": 19507, 
     "data_name": "Thistle spp.", 
     "dnr_link": "", 
@@ -756,7 +756,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Milk_thistle_flowerhead.jpg/200px-Milk_thistle_flowerhead.jpg"
   }, 
   "Thistle, Bull": {
-    "color": "8D6D36 ", 
+    "color": "8747AA", 
     "count": 1694, 
     "data_name": "Thistle, Bull", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/bullthistle.html", 
@@ -766,7 +766,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cirsium_vulgare_carriere-fossoy_02_23062008_02.jpg/200px-Cirsium_vulgare_carriere-fossoy_02_23062008_02.jpg"
   }, 
   "Thistle, Canada": {
-    "color": "9E9BA5 ", 
+    "color": "CCB3C4", 
     "count": 10435, 
     "data_name": "Thistle, Canada", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/canadathistle.html", 
@@ -776,7 +776,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Cirsium_arvense_with_Bees_Richard_Bartz.jpg/200px-Cirsium_arvense_with_Bees_Richard_Bartz.jpg"
   }, 
   "Thistle, Musk/Nodding": {
-    "color": "8B6952 ", 
+    "color": "A8619B", 
     "count": 331, 
     "data_name": "Thistle, Musk/Nodding", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/muskthistle.html", 
@@ -786,7 +786,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Musk_thistle.jpg/220px-Musk_thistle.jpg"
   }, 
   "Thistle, Plumeless": {
-    "color": "929B66 ", 
+    "color": "B27B8A", 
     "count": 1509, 
     "data_name": "Thistle, Plumeless", 
     "dnr_link": "", 
@@ -796,7 +796,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Musk_thistle.jpg/200px-Musk_thistle.jpg"
   }, 
   "Thistle, Sow": {
-    "color": "A29918 ", 
+    "color": "F2E30F", 
     "count": 1064, 
     "data_name": "Thistle, Sow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/perennialsowthistle.html", 
@@ -806,7 +806,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sonchus_arvensis2_W.jpg/200px-Sonchus_arvensis2_W.jpg"
   }, 
   "Trefoil, Birdsfoot": {
-    "color": "A29860 ", 
+    "color": "C3BF35", 
     "count": 2840, 
     "data_name": "Trefoil, Birdsfoot", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/birdsfoottrefoil.html", 
@@ -816,7 +816,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lotus_formosissima_2.jpg/220px-Lotus_formosissima_2.jpg"
   }, 
   "Vetch": {
-    "color": "87A775 ", 
+    "color": "4B9636", 
     "count": 5, 
     "data_name": "Vetch", 
     "dnr_link": "", 
@@ -826,7 +826,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicia_orobus1_eF.jpg/200px-Vicia_orobus1_eF.jpg"
   }, 
   "Vetch, Cow": {
-    "color": "93B638 ", 
+    "color": "A05BCF", 
     "count": 599, 
     "data_name": "Vetch, Cow", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/cowvetch.html", 
@@ -836,7 +836,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Tufted_vetch_close_800.jpg/200px-Tufted_vetch_close_800.jpg"
   }, 
   "Vetch, Crown": {
-    "color": "9A8C68 ", 
+    "color": "A05BCF", 
     "count": 513, 
     "data_name": "Vetch, Crown", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/crownvetch.html", 
@@ -846,7 +846,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Coronilla_varia005.JPG/200px-Coronilla_varia005.JPG"
   }, 
   "Vetch, Hairy": {
-    "color": "8CAA69 ", 
+    "color": "A05BCF", 
     "count": 301, 
     "data_name": "Vetch, Hairy", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/cowvetch.html", 
@@ -856,7 +856,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Vicia_villosa.jpeg/200px-Vicia_villosa.jpeg"
   }, 
   "alewife": {
-    "color": "979FA2 ", 
+    "color": "748ACE", 
     "count": 47, 
     "data_name": "alewife", 
     "dnr_link": "", 
@@ -866,7 +866,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Alosa_pseudoharengus.jpg/200px-Alosa_pseudoharengus.jpg"
   }, 
   "bighead carp": {
-    "color": "F7F7F7 g", 
+    "color": "874837", 
     "count": 2, 
     "data_name": "bighead carp", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/asiancarp/index.html", 
@@ -876,7 +876,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Bighead_carp_b.gif/220px-Bighead_carp_b.gif"
   }, 
   "curly-leaf pondweed": {
-    "color": "9C8F6E ", 
+    "color": "9C906E", 
     "count": 730, 
     "data_name": "curly-leaf pondweed", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/curlyleaf_pondweed.html", 
@@ -886,7 +886,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PotamogetonCrispus.jpg/200px-PotamogetonCrispus.jpg"
   }, 
   "flowering rush": {
-    "color": "91A738 ", 
+    "color": "DE7687", 
     "count": 16, 
     "data_name": "flowering rush", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/terrestrialplants/herbaceous/floweringrush.html", 
@@ -896,7 +896,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ButomusUmbellatus3.jpg/200px-ButomusUmbellatus3.jpg"
   }, 
   "goldfish": {
-    "color": "C34D1F ", 
+    "color": "E7500E", 
     "count": 20, 
     "data_name": "goldfish", 
     "dnr_link": "", 
@@ -906,7 +906,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Goldfish3.jpg/200px-Goldfish3.jpg"
   }, 
   "grass carp": {
-    "color": "6B837B ", 
+    "color": "528B96", 
     "count": 12, 
     "data_name": "grass carp", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/grasscarp/index.html", 
@@ -916,7 +916,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Grass-Carp1web.jpg/200px-Grass-Carp1web.jpg"
   }, 
   "purple loosestrife": {
-    "color": "9AA694 ", 
+    "color": "9E24A0", 
     "count": 2429, 
     "data_name": "purple loosestrife", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticplants/purpleloosestrife/index.html", 
@@ -926,7 +926,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Purple_loosestrife2.jpg/220px-Purple_loosestrife2.jpg"
   }, 
   "rainbow smelt": {
-    "color": "C89D73 ", 
+    "color": "8D6136", 
     "count": 123, 
     "data_name": "rainbow smelt", 
     "dnr_link": "", 
@@ -936,7 +936,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rainbow_smelt.jpg/200px-Rainbow_smelt.jpg"
   }, 
   "round goby": {
-    "color": "9F876E ", 
+    "color": "7C8394", 
     "count": 6, 
     "data_name": "round goby", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/roundgoby/index.html", 
@@ -946,7 +946,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/RoundGoby.jpg/250px-RoundGoby.jpg"
   }, 
   "ruffe": {
-    "color": "8E6D56 ", 
+    "color": "847239", 
     "count": 51, 
     "data_name": "ruffe", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/ruffe/index.html", 
@@ -956,7 +956,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Gymnocephalus_cernuus.jpg/200px-Gymnocephalus_cernuus.jpg"
   }, 
   "sea lamprey": {
-    "color": "A5703C ", 
+    "color": "76874E", 
     "count": 32, 
     "data_name": "sea lamprey", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/sealamprey/index.html", 
@@ -966,7 +966,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sea_Lamprey_fish.jpg/200px-Sea_Lamprey_fish.jpg"
   }, 
   "spiny waterflea": {
-    "color": "EAEAEA ", 
+    "color": "55A897", 
     "count": 42, 
     "data_name": "spiny waterflea", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/spinywaterflea/index.html", 
@@ -976,7 +976,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cercopagidae_GLERL_1.jpg/220px-Cercopagidae_GLERL_1.jpg"
   }, 
   "threespine stickleback": {
-    "color": "73A2C3 ", 
+    "color": "AD6116", 
     "count": 18, 
     "data_name": "threespine stickleback", 
     "dnr_link": "", 
@@ -986,7 +986,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Gasterosteus_aculeatus.jpg/200px-Gasterosteus_aculeatus.jpg"
   }, 
   "tubenose goby": {
-    "color": "938B6D ", 
+    "color": "94632E", 
     "count": 7, 
     "data_name": "tubenose goby", 
     "dnr_link": "", 
@@ -996,7 +996,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Proterorhinus_marmoratus_6.jpg/200px-Proterorhinus_marmoratus_6.jpg"
   }, 
   "white perch": {
-    "color": "C6B9A0 ", 
+    "color": "C6B9A0", 
     "count": 28, 
     "data_name": "white perch", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/whiteperch/index.html", 
@@ -1006,7 +1006,7 @@ species_metadata_callback({
     "wp_thumb": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/White_Perch.jpg/200px-White_Perch.jpg"
   }, 
   "zebra mussel": {
-    "color": "968D6F ", 
+    "color": "906533", 
     "count": 39, 
     "data_name": "zebra mussel", 
     "dnr_link": "http://www.dnr.state.mn.us/invasives/aquaticanimals/zebramussel/index.html", 
