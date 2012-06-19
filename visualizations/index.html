@@ -394,8 +394,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                       .attr('href', '#')
                       .click(function(e) {
                         e.preventDefault();
+                        e.stopPropagation();
                         $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
                         popupOpen = false;
+                        return false;
                       });
                   }
                   
