@@ -67,6 +67,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
         width: 100%;
         height: 500px;
         float: left;
+        z-index: 999;
       }
       .leaflet-container a {
         color: #801019;
@@ -216,10 +217,22 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   <td><%= md.PLANT_DIST %></td>
                 </tr>
               <% } %>
+              <% if (md.SITE != '') { %>
+                <tr class="site-type">
+                  <td>Site type</td>
+                  <td><%= md.SITE %></td>
+                </tr>
+              <% } %>
+              <% if (md.SITE_TYPE != '') { %>
+                <tr class="site-type">
+                  <td>Site type</td>
+                  <td><%= md.SITE_TYPE %></td>
+                </tr>
+              <% } %>
               <% if (md.FIRST_OBS != '' && md.FIRST_OBS != 0) { %>
                 <tr class="observed">
                   <td>First observed</td>
-                  <td><%= md.PLANT_DIST %></td>
+                  <td><%= md.FIRST_OBS %></td>
                 </tr>
               <% } %>
               <% if (md.DATE != '' && md.DATE != 0) { %>
@@ -348,14 +361,14 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             // Hack the planet (aka the tilejson)
             tilejson.scheme = 'tms';
             // For testing purposes, use S3 directly as opposed to Cloudfront.
-            /*
+            
             tilejson.tiles = [
               'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
             ];
             tilejson.grids = [
               'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
             ];
-            */
+            
     
             // Move attributioin to footnotes
             map.attributionControl.setPrefix('');
@@ -446,7 +459,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             }
             
             // Format data
-            var colors = [];
             var gData = [];
             var i, j;
             var found = false;
@@ -456,24 +468,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                 continue;
               }
               
-              // Check if there already a counted site_name
-              if (!_.isUndefined(sm[i].site_name) && sm[i].site_name !== '') {
-                found = false;
-                for (j in gData) {
-                  if (gData[j][0] === sm[i].site_name) {
-                    found = true;
-                    // Update existing one
-                    gData[j][1] += sm[i].count;
-                  }
-                }
-                
-                if (!found) {
-                  gData.push([sm[i].site_name, sm[i].count, cS(sm[i].color)]);
-                }
-              }
-              else {
-                gData.push([sm[i].data_name, sm[i].count, cS(sm[i].color)]);
-              }
+              gData.push([sm[i].data_name, sm[i].count, cS(sm[i].color)]);
             }
             
             // Sort by count
@@ -484,6 +479,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
             // Create google datatable for chart.  To trick into having
             // different colors for each bar, we have to have a seprate
             // column for each data point
+            var colors = [];
             var g;
             var c = 0;
             var data = new google.visualization.DataTable();
@@ -492,7 +488,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
               data.addColumn('number', gData[g][0]);
               data.setValue(0, c++, gData[g][1]);
               
-              colors.push(gData[g][2]);
+              // Need to offset color one.
+              if (c > 1) {
+                colors.push(gData[g][2]);
+              }
             }
             
             // Try to get rid of the first number
