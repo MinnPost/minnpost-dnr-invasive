@@ -170,6 +170,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
     </style>
     
     <div id="minnpost-invasive-species-application">
+      <!-- <a href="#" class="zoom-map" data-zoom="44.92786297463683,-93.60557556152344,11">Zoom map</a> -->
       
       <div id="map"></div>
       <br class="clear" />
@@ -354,6 +355,18 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","combineBlocks":[["#block-views-
                   $thisA.toggleClass('label-toggler-on');
                 })
             );
+          
+          // Handle any zoom links
+          $('a.zoom-map').click(function(e) {
+            e.preventDefault();
+            var $thisLink = $(this);
+            var zData = $thisLink.attr('data-zoom');
+            
+            zData = zData.split(',');
+            if (!_.isUndefined(zData[0]) && !_.isUndefined(zData[1]) && !_.isUndefined(zData[2])) {
+              map.setView(new L.LatLng(zData[0], zData[1]), zData[2]);
+            }
+          });
           
           // Tilejson layer of species
           var metadata = 'http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp';
