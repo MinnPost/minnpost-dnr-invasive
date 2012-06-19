@@ -55,7 +55,7 @@
       "id": "invasive",
       "class": "",
       "Datasource": {
-        "file": "https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip",
+        "file": "https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined_dnr_invasive-900913.zip",
         "id": "invasive",
         "project": "mn-invasive",
         "srs": null

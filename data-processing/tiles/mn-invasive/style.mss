@@ -4,7 +4,7 @@
   marker-line-width: 0;
   marker-line-color: transparent;
   marker-allow-overlap: true;
-  marker-opacity: 0.6;
+  marker-opacity: 0.7;
 }
 #invasive {
   [zoom > 9][zoom <= 6]   { marker-width: 2; }

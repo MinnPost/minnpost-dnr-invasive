@@ -12,8 +12,8 @@ Data from the Minnesota DNR and their awesome [Data Deli](http://deli.dnr.state.
 * Invasive Species - Terrestrial Observations
     * http://deli.dnr.state.mn.us/metadata.html?id=L390004820203
     * ftp://ftp.dnr.state.mn.us/pub/deli/d23954283106172.zip
-* Combined Shapefile
-    * https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined-DNR+Invasive+Species.zip
+* Combined, optimized, and reprojected Shapefile (utilizing ogr2ogr and shapeindex):
+    * https://s3.amazonaws.com/data.minnpost/geospatial-data/dnr-data-deli/20120613-combined_dnr_invasive-900913.zip
 * Data from the DNR site concerning invasive species.
     * https://scraperwiki.com/scrapers/mn_dnr_invasive_species/
 
