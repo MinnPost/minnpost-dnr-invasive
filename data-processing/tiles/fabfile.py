@@ -73,6 +73,14 @@ def staging():
   ]
   
 
+def node(node_path, tilemill_path):
+  """
+  Set path to node and tilemill
+  """
+  env.tilemill_path = tilemill_path
+  env.node_path = node_path
+  
+
 def map(name):
   """
   Select map to work on.
@@ -180,7 +188,7 @@ def generate_mbtile(minzoom=None, maxzoom=None):
       local('export ICU_DATA=%(tilemill_path)s/data/icu/' % env)
     
     # Export
-    local('%(tilemill_path)s/node %(tilemill_path)s/index.js export --format=mbtiles --minzoom=%(minzoom)s --maxzoom=%(maxzoom)s --bbox=%(bbox)s %(map)s %(map)s/exports/%(map)s.mbtiles' % env)
+    local('%(node_path)s %(tilemill_path)s/index.js export --format=mbtiles --minzoom=%(minzoom)s --maxzoom=%(maxzoom)s --bbox=%(bbox)s %(map)s %(map)s/exports/%(map)s.mbtiles' % env)
 
 
 def generate_tiles_from_mbtile():
