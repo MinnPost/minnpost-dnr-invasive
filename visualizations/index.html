@@ -493,7 +493,8 @@
             }
             
             // Format data
-            var gData = [];
+            var colors = [];
+            var gData = {};
             var i, j;
             var found = false;
             for (i in sm) {
@@ -502,29 +503,40 @@
                 continue;
               }
               
-              gData.push([sm[i].data_name, sm[i].count, cS(sm[i].color)]);
+              // Collect by name
+              c = cS(sm[i].color);
+              name = sm[i].site_name || sm[i].data_name;
+              if (!_.isUndefined(gData[name])) {
+                gData[name].count += sm[i].count;
+              }
+              else {
+                gData[name] = {
+                  'count': sm[i].count,
+                  'color': c,
+                  'name': name
+                };
+              }
             }
             
             // Sort by count
             gData = _.sortBy(gData, function(row) {
-              return row[1];
+              return row.count;
             });
             
             // Create google datatable for chart.  To trick into having
             // different colors for each bar, we have to have a seprate
             // column for each data point
-            var colors = [];
             var g;
             var c = 0;
             var data = new google.visualization.DataTable();
             data.addRows(1);
             for (g in gData) {
-              data.addColumn('number', gData[g][0]);
-              data.setValue(0, c++, gData[g][1]);
+              data.addColumn('number', gData[g].name);
+              data.setValue(0, c++, gData[g].count);
               
               // Need to offset color one.
               if (c > 1) {
-                colors.push(gData[g][2]);
+                colors.push(gData[g].color);
               }
             }
             
