@@ -18,14 +18,14 @@
 <link rel="apple-touch-icon" href="http://www.minnpost.com//sites/default/themes/siteskin/inc/images/apple-touch-icon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
-  <link type="text/css" rel="stylesheet" media="all" href="http://www.minnpost.com/sites/default/files/css/css_9bfc99c74276aebc716f388c80378787.css" />
-<link type="text/css" rel="stylesheet" media="screen" href="http://www.minnpost.com/sites/default/files/css/css_cc868ff442f1d24fea299366f6788c15.css" />
-<link type="text/css" rel="stylesheet" media="print" href="http://www.minnpost.com/sites/default/files/css/css_34a6d43c87e9386469ec8caf46422ece.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="http://www.minnpost.com/sites/default/files/css/css_58f8169b90361eae60ddb78c5d4e06a0.css" />
+<link type="text/css" rel="stylesheet" media="print" href="http://www.minnpost.com/sites/default/files/css/css_9a16ddd9f3d750910548cfe206417401.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="http://www.minnpost.com/sites/default/files/css/css_dff6bdb086fd723e500615a0529e1f35.css" />
   <!--[if IE]>
-      <link rel="stylesheet" href="http://www.minnpost.com/sites/default/themes/derma/inc/css/ie.css?t" type="text/css">
+      <link rel="stylesheet" href="http://www.minnpost.com/sites/default/themes/derma/inc/css/ie.css?O" type="text/css">
   <![endif]-->
-    <script type="text/javascript" src="http://www.minnpost.com/sites/default/files/js/js_b07159aa4d58908fdc33ece074fd9ff9.js"></script>
-<script type="text/javascript" src="http://www.minnpost.com/sites/all/libraries/tinymce/jscripts/tiny_mce/tiny_mce.js?t"></script>
+    <script type="text/javascript" src="http://www.minnpost.com/sites/default/files/js/js_8fd04efc70b0a3d094850cf95ba7ebf2.js"></script>
+<script type="text/javascript" src="http://www.minnpost.com/sites/all/libraries/tinymce/jscripts/tiny_mce/tiny_mce.js?O"></script>
 </head>
 <body class="not-front logged-in page-node node-type-article one-sidebar sidebar-right admin-nw admin-vertical admin-df  section-data section-data-id-2012 section-data-id-2012-id-05 section-data-id-2012-id-05-how-we-built-legislative-bill-explorer one-sidebar sidebar-right">
 <div class="outside-embeddable-container">
@@ -33,7 +33,7 @@
   <!-- START: Embeddable -->
   <div class="node-body fieldlayout node-field-body">
     <style type="text/css">
-      @import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-master-20120531/leaflet.css');
+      @import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.css');
       @import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.css');
     </style>
     
@@ -184,7 +184,7 @@
     
     <!--[if lte IE 8]>
       <style type="text/css">
-      	@import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-master-20120531/leaflet.ie.css');
+      	@import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.ie.css');
       	@import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.ie.css');
       </style>
     <![endif]-->
@@ -301,7 +301,7 @@
       window.jQuery || document.write('<script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-1.7.2/jquery-1.7.2.min.js"><\/script>')
     </script>
     <!-- Leaflet and wax for mapping -->
-    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/leaflet-master-20120531/leaflet.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.js"></script>
     <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.min.js"></script>
     <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/wax-master-20121004/wax.leaf.min.js"></script>
     <!-- Underscore -->
@@ -341,7 +341,7 @@
           
           // Base layers
           var osmbaseurl = 'http://{s}.tiles.mapbox.com/v1/zzolo.map-rhqrrivf/{z}/{x}/{y}.png';
-          var osmbaselayer = new L.TileLayer(osmbaseurl, { scheme: 'tms' });
+          var osmbaselayer = new L.TileLayer(osmbaseurl, { tms: true });
           map.addLayer(osmbaselayer);
           var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
             'minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png';
@@ -351,7 +351,7 @@
             'href="http://minnpost.com">MinnPost</a> and <a target="_blank" ' +
             'href="http://mapbox.com">Mapbox</a>.';
           var minnpost = new L.TileLayer(tiles, 
-            { attribution: attribution, scheme: 'tms' });
+            { attribution: attribution, tms: true });
           map.addLayer(minnpost);
           
           // Labels layer with button to turn off and on
@@ -392,7 +392,7 @@
           var metadata = 'http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp';
           wax.tilejson(metadata, function(tilejson) {
             // Hack the planet (aka the tilejson)
-            tilejson.scheme = 'tms';
+            tilejson.tms = true;
             // For testing purposes, use S3 directly as opposed to Cloudfront.
             /*
             tilejson.tiles = [
