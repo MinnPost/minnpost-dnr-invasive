@@ -340,8 +340,8 @@
           $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
           
           // Base layers
-          var osmbaseurl = 'http://{s}.tiles.mapbox.com/v1/zzolo.map-rhqrrivf/{z}/{x}/{y}.png';
-          var osmbaselayer = new L.TileLayer(osmbaseurl, { tms: true });
+          var osmbaseurl = 'http://{s}.tiles.mapbox.com/v3/minnpost.map-dhba3e3l/{z}/{x}/{y}.png';
+          var osmbaselayer = new L.TileLayer(osmbaseurl);
           map.addLayer(osmbaselayer);
           var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
             'minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png';
