@@ -1,9 +1,9 @@
 {
   "bounds": [
-    -100.6128,
-    39.8592,
-    -87.0557,
-    50.2332
+    -97.5037,
+    43.2533,
+    -89.242,
+    49.5609
   ],
   "center": [
     -93.7354,
@@ -41,8 +41,8 @@
     "template_teaser": "{{{SCI_NAME}}} <br /> \n{{{COM_NAME}}} <br /> \n {{{INV_TYPE}}} <br /> \n {{{LOCALITY}}} <br /> \n {{{DOWLKNUM}}} <br /> \n {{{X}}} <br /> \n {{{Y}}} <br /> \n {{{FIRST_OBS}}} <br /> \n {{{NUM_OBS}}} <br /> \n {{{SITE}}} <br /> \n {{{COUNTY}}} <br /> \n {{{LOCATION}}} <br /> \n{{{DATE}}} <br /> \n{{{OBSERVER}}} <br /> \n{{{OBSERVE_AF}}} <br /> \n{{{COMMON_NAM}}} <br /> \n{{{NUM_PLANTS}}} <br /> \n{{{PLANT_DIST}}} <br /> \n{{{ACRES_INF}}} <br /> \n{{{SITE_TYPE}}} <br /> \n{{{COMMENT}}} <br /> \n{{{X_PROJ}}}  <br /> \n{{{Y_PROJ}}}",
     "template_full": "{{{SCI_NAME}}} <br /> \n{{{COM_NAME}}} <br /> \n {{{INV_TYPE}}} <br /> \n {{{LOCALITY}}} <br /> \n {{{DOWLKNUM}}} <br /> \n {{{X}}} <br /> \n {{{Y}}} <br /> \n {{{FIRST_OBS}}} <br /> \n {{{NUM_OBS}}} <br /> \n {{{SITE}}} <br /> \n {{{COUNTY}}} <br /> \n {{{LOCATION}}} <br /> \n {{{DATE}}} <br /> \n {{{OBSERVER}}} <br /> \n {{{OBSERVE_AF}}} <br /> \n {{{COMMON_NAM}}} <br /> \n {{{NUM_PLANTS}}} <br /> \n {{{PLANT_DIST}}} <br /> \n {{{ACRES_INF}}} <br /> \n {{{SITE_TYPE}}} <br /> \n {{{COMMENT}}} <br /> \n {{{X_PROJ}}}  <br /> \n{{{Y_PROJ}}}"
   },
-  "minzoom": 0,
-  "maxzoom": 22,
+  "minzoom": 3,
+  "maxzoom": 11,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss",
@@ -65,8 +65,11 @@
       "name": "invasive"
     }
   ],
+  "scale": 1,
+  "metatile": 2,
   "name": "Minnesota Invasive Species",
   "description": "",
   "legend": "",
-  "attribution": ""
+  "attribution": "Minnesota DNR",
+  "version": "0.1.0"
 }

@@ -33,7 +33,7 @@
   <!-- START: Embeddable -->
   <div class="node-body fieldlayout node-field-body">
     <style type="text/css">
-      @import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.css');
+      @import url('//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css');
       @import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.css');
     </style>
     
@@ -184,7 +184,7 @@
     
     <!--[if lte IE 8]>
       <style type="text/css">
-      	@import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.ie.css');
+      	@import url('//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css');
       	@import url('https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.ie.css');
       </style>
     <![endif]-->
@@ -301,9 +301,8 @@
       window.jQuery || document.write('<script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-1.7.2/jquery-1.7.2.min.js"><\/script>')
     </script>
     <!-- Leaflet and wax for mapping -->
-    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/leaflet-0.4.2/leaflet.js"></script>
+    <script type="text/javascript" src="//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js"></script>
     <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/leaflet-addons-master-20120531/leaflet-addons.min.js"></script>
-    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/wax-master-20121004/wax.leaf.min.js"></script>
     <!-- Underscore -->
     <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/underscore-1.3.3/underscore-min.js"></script>
     <!-- Googles chart API -->
@@ -328,9 +327,10 @@
           
           // Create map
           var center = new L.LatLng(46.483264729155586, -91.2740625);
-          var map = new L.Map('map', {
+          var map = L.mapbox.map('map', 'minnpost.map-4v6echxm,minnpost.mn-dnr-invasive', {
             minZoom: 6,
-            maxZoom: 14
+            maxZoom: 14,
+            gridControl: false
           });
           map.setView(center, 6);
           map.addControl(new L.Control.Fullscreen());
@@ -338,43 +338,6 @@
           // Placeholder for popup content and help text
           $(map._container).append(_.template($('#template-popup-container').html(), {}));
           $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
-          
-          // Base layers
-          var osmbaseurl = 'http://{s}.tiles.mapbox.com/v3/minnpost.map-dhba3e3l/{z}/{x}/{y}.png';
-          var osmbaselayer = new L.TileLayer(osmbaseurl);
-          map.addLayer(osmbaselayer);
-          var tiles = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
-            'minnpost-minnesota-night-no-labels/{z}/{x}/{y}.png';
-          var attribution = 'Some map data &copy; ' +
-            '<a target="_blank" href="http://openstreetmap.org">OpenStreetMap</a> ' +
-            'contributors, CC-BY-SA, some map imagery from <a target="_blank" ' +
-            'href="http://minnpost.com">MinnPost</a> and <a target="_blank" ' +
-            'href="http://mapbox.com">Mapbox</a>.';
-          var minnpost = new L.TileLayer(tiles, 
-            { attribution: attribution, tms: true });
-          map.addLayer(minnpost);
-          
-          // Labels layer with button to turn off and on
-          var tilesLabels = 'http://{s}.tiles.minnpost.com/minnpost-basemaps/' +
-            'minnpost-minnesota-night-labels/{z}/{x}/{y}.png';
-          var minnpostLabels = new L.TileLayer(tilesLabels, { scheme: 'tms' });
-          $('.leaflet-control-container .leaflet-bottom.leaflet-left')
-            .append(
-              $('<a>Show labels</a>').addClass('label-toggler')
-                .addClass('label-toggler-on')
-                .click(function(e) {
-                  var $thisA = $(this);
-                  if ($thisA.hasClass('label-toggler-on')) {
-                    $thisA.html('Hide labels');
-                    map.addLayer(minnpostLabels);
-                  }
-                  else {
-                    $thisA.html('Show labels');
-                    map.removeLayer(minnpostLabels);
-                  }
-                  $thisA.toggleClass('label-toggler-on');
-                })
-            );
           
           // Handle any zoom links
           $('a.zoom-map').click(function(e) {
@@ -387,97 +350,78 @@
               map.setView(new L.LatLng(zData[0], zData[1]), zData[2]);
             }
           });
-          
-          // Tilejson layer of species
-          var metadata = 'http://a.tiles.minnpost.com/minnpost-dnr-invasive/mn-invasive/tilejson.jsonp';
-          wax.tilejson(metadata, function(tilejson) {
-            // Hack the planet (aka the tilejson)
-            tilejson.tms = true;
-            // For testing purposes, use S3 directly as opposed to Cloudfront.
-            /*
-            tilejson.tiles = [
-              'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.png'
-            ];
-            tilejson.grids = [
-              'https://s3.amazonaws.com/a.tiles.minnpost/minnpost-dnr-invasive/mn-invasive/{z}/{x}/{y}.grid.json'
-            ];
-            */
             
     
-            // Move attributioin to footnotes
-            map.attributionControl.setPrefix('');
-            $('.footnote').html($('.footnote').html() + ' ' + map.attributionControl._container.innerHTML);
-            map.removeControl(map.attributionControl);
+          // Move attributioin to footnotes
+          map.attributionControl.setPrefix('');
+          $('.footnote').html($('.footnote').html() + ' ' + map.attributionControl._container.innerHTML);
+          map.removeControl(map.attributionControl);
           
-            // Add layer and interaction
-            map.addLayer(new wax.leaf.connector(tilejson));
-            wax.leaf.interaction()
-              .map(map)
-              .tilejson(tilejson)
-              .on({
-                on: function(e) {
-                  // Event handling types borrowed from wax.
-                  //
-                  // If popup is open and mouseing over, do nothing.
-                  // If popup is open and click, open new popup. 
-                  //
-                  // If popup is not open and mouseing over, show new data.
-                  // If popup is not open and click, open new popup
-                  var addClose = '';
-                  
-                  // Mouse over and open
-                  if ((e.e.type === 'mousemove' || !e.e.type) && popupOpen) {
-                    map._container.style.cursor = 'pointer';
-                    return;
-                  }
-                  // If mouseover, change cursor, but still open data
-                  if ((e.e.type === 'mousemove' || !e.e.type)) {
-                    map._container.style.cursor = 'pointer';
-                  }
-                  else {
-                    // Popup
-                    popupOpen = true;
-                    addClose = $('<a>close</a>').addClass('popup-close')
-                      .attr('href', '#')
-                      .click(function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
-                        popupOpen = false;
-                        return false;
-                      });
-                  }
-                  
-                  // Handle data
-                  var tData = { 'md': e.data, 'sm': {} };
-                  var $popup = $('.map-popup-container');
-                  
-                  // Check metada
-                  tData.title = (e.data.COMMON_NAM === '') ? e.data.COM_NAME :
-                    e.data.COMMON_NAM;
-                  if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
-                    tData.sm = sm[tData.title];
-                    if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name !== '') {
-                      tData.title = sm[tData.title].site_name;
-                    }
-                  }
-                  
-                  // Display popup
-                  if (!_.isEmpty(tData) && tData.title !== '') {
-                    $popup.html(_.template($("#template-popup-contents").html(), tData));
-                    $popup.prepend(addClose);
-                    $popup.fadeIn('fast');
-                  }
-                },
-                off: function(e) {
-                  map._container.style.cursor = 'default';
-                  
-                  if (!popupOpen) {
+          map.gridLayer
+            .on('mousemove click', function(e) {
+              // Event handling types borrowed from wax.
+              //
+              // If popup is open and mouseing over, do nothing.
+              // If popup is open and click, open new popup. 
+              //
+              // If popup is not open and mouseing over, show new data.
+              // If popup is not open and click, open new popup
+              var addClose = '';
+              
+              // Mouse over and open
+              if ((e.type === 'mousemove' || !e.type) && popupOpen) {
+                map._container.style.cursor = 'pointer';
+                return;
+              }
+              // If mouseover, change cursor, but still open data
+              if ((e.type === 'mousemove' || !e.type)) {
+                map._container.style.cursor = 'pointer';
+              }
+              else {
+                // Popup
+                popupOpen = true;
+                addClose = $('<a>close</a>').addClass('popup-close')
+                  .attr('href', '#')
+                  .click(function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
-                  }
+                    popupOpen = false;
+                    return false;
+                  });
+              }
+              
+              // Handle data
+              var tData = { 'md': e.data, 'sm': {} };
+              var $popup = $('.map-popup-container');
+              
+              // Check metada
+              tData.title = '';
+              if (_.isObject(e.data)) {
+                tData.title = (e.data.COMMON_NAM === '') ? e.data.COM_NAME :
+                  e.data.COMMON_NAM;
+              }
+              if (!_.isEmpty(sm) && !_.isEmpty(sm[tData.title])) {
+                tData.sm = sm[tData.title];
+                if (!_.isUndefined(sm[tData.title].site_name) && sm[tData.title].site_name !== '') {
+                  tData.title = sm[tData.title].site_name;
                 }
-              });
-          });
+              }
+              
+              // Display popup
+              if (!_.isEmpty(tData) && tData.title !== '') {
+                $popup.html(_.template($("#template-popup-contents").html(), tData));
+                $popup.prepend(addClose);
+                $popup.fadeIn('fast');
+              }
+            }).on('mouseout', function(e) {
+              map._container.style.cursor = 'default';
+              
+              if (!popupOpen) {
+                $('.map-popup-container').html(_.template($('#template-popup-contents-empty').html(), {}));
+              }
+            });
+            
           
           // Color sanitize
           var cS = function(color) {
